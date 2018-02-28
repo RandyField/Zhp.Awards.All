@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C6B2D83-9012-471D-977B-224B0F236838}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFModel</RootNamespace>
+    <AssemblyName>EFModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedPacketModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RedPacketModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RedPacketModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RedPacketModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RedPacketModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TRF_WeChatUserInfo.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_Activity.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_ActivityAwardDetail.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_Award.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_AwardCategory.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_AwardCategoryProportion.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_AwardDetail.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_AwardReceive.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_AwardType.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_AwardTypeProportion.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_Award_bak.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_ClientLog.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_ClientLog_bak.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_OpenCount.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_QRCodeScanLimited.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRP_ScanCount.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Activity.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Award.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_AwardCategory.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_AwardDetail.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_AwardReceive.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_AwardType.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_ClientLog.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_PreciousAward.cs">
+      <DependentUpon>RedPacketModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="RedPacketModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RedPacketModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="RedPacketModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RedPacketModel.edmx</DependentUpon>
+      <LastGenOutput>RedPacketModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="RedPacketModel.edmx.diagram">
+      <DependentUpon>RedPacketModel.edmx</DependentUpon>
+    </None>
+    <None Include="RedPacketModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RedPacketModel.edmx</DependentUpon>
+      <LastGenOutput>RedPacketModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{6421687e-186b-41e9-a610-828ff68bc3c9}</Project>
+      <Name>ScreenStateSearch.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

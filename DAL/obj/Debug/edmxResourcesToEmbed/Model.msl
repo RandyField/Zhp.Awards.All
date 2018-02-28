@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="socketlib_serverModelStoreContainer" CdmEntityContainer="socketlib_serverEntities">
+    <EntitySetMapping Name="TH_HARDWARE_STATE">
+      <EntityTypeMapping TypeName="socketlib_serverModel.TH_HARDWARE_STATE">
+        <MappingFragment StoreEntitySet="TH_HARDWARE_STATE">
+          <ScalarProperty Name="recordid" ColumnName="recordid" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="errornum" ColumnName="errornum" />
+          <ScalarProperty Name="producetime" ColumnName="producetime" />
+          <ScalarProperty Name="uploadtime" ColumnName="uploadtime" />
+          <ScalarProperty Name="storetime" ColumnName="storetime" />
+          <ScalarProperty Name="savetype" ColumnName="savetype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_SOCKETLIB_CONFIG">
+      <EntityTypeMapping TypeName="socketlib_serverModel.TS_SOCKETLIB_CONFIG">
+        <MappingFragment StoreEntitySet="TS_SOCKETLIB_CONFIG">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="nodecomputername" ColumnName="nodecomputername" />
+          <ScalarProperty Name="cityname" ColumnName="cityname" />
+          <ScalarProperty Name="linename" ColumnName="linename" />
+          <ScalarProperty Name="stationname" ColumnName="stationname" />
+          <ScalarProperty Name="terminaltype" ColumnName="terminaltype" />
+          <ScalarProperty Name="clienttype" ColumnName="clienttype" />
+          <ScalarProperty Name="stationseq" ColumnName="stationseq" />
+          <ScalarProperty Name="projectname" ColumnName="projectname" />
+          <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+          <ScalarProperty Name="modifier" ColumnName="modifier" />
+          <ScalarProperty Name="verifier" ColumnName="verifier" />
+          <ScalarProperty Name="usedmark" ColumnName="usedmark" />
+          <ScalarProperty Name="citycode" ColumnName="citycode" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="screentype" ColumnName="screentype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

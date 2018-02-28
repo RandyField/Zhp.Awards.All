@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="socketlib_serverModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="TH_HARDWARE_STATE">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="errornum" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="producetime" Type="DateTime" Precision="3" />
+    <Property Name="uploadtime" Type="DateTime" Precision="3" />
+    <Property Name="storetime" Type="DateTime" Precision="3" />
+    <Property Name="savetype" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TS_SOCKETLIB_CONFIG">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nodecomputername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="cityname" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="linename" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="stationname" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="terminaltype" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="clienttype" Type="Int32" Nullable="false" />
+    <Property Name="stationseq" Type="Int32" />
+    <Property Name="projectname" Type="String" MaxLength="21" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="modifytime" Type="DateTime" Precision="3" />
+    <Property Name="modifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="verifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="usedmark" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="citycode" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="position" Type="String" MaxLength="41" FixedLength="true" Unicode="true" />
+    <Property Name="screentype" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="socketlib_serverEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TH_HARDWARE_STATE" EntityType="Self.TH_HARDWARE_STATE" />
+    <EntitySet Name="TS_SOCKETLIB_CONFIG" EntityType="Self.TS_SOCKETLIB_CONFIG" />
+  </EntityContainer>
+</Schema>

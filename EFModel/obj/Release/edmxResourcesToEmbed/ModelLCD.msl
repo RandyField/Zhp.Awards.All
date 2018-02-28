@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="serverModelStoreContainer" CdmEntityContainer="socketlib_serverEntities">
+    <EntitySetMapping Name="ActivityVote_SMS">
+      <EntityTypeMapping TypeName="serverModel.ActivityVote_SMS">
+        <MappingFragment StoreEntitySet="ActivityVote_SMS">
+          <ScalarProperty Name="ActivityVoteID" ColumnName="ActivityVoteID" />
+          <ScalarProperty Name="VoteID" ColumnName="VoteID" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="VoteRank" ColumnName="VoteRank" />
+          <ScalarProperty Name="SMS1EndType" ColumnName="SMS1EndType" />
+          <ScalarProperty Name="SMS1SendTime" ColumnName="SMS1SendTime" />
+          <ScalarProperty Name="SMS1EndTime" ColumnName="SMS1EndTime" />
+          <ScalarProperty Name="SMS2EndType" ColumnName="SMS2EndType" />
+          <ScalarProperty Name="SMS2ReceiveTime" ColumnName="SMS2ReceiveTime" />
+          <ScalarProperty Name="SMS2SendTime" ColumnName="SMS2SendTime" />
+          <ScalarProperty Name="SMS2EndTime" ColumnName="SMS2EndTime" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="InfoMark" ColumnName="InfoMark" />
+          <ScalarProperty Name="updatetime" ColumnName="updatetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TD_COMMAND_STATE">
+      <EntityTypeMapping TypeName="serverModel.TD_COMMAND_STATE">
+        <MappingFragment StoreEntitySet="TD_COMMAND_STATE">
+          <ScalarProperty Name="recordid" ColumnName="recordid" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="commandnum" ColumnName="commandnum" />
+          <ScalarProperty Name="execstate" ColumnName="execstate" />
+          <ScalarProperty Name="execdes" ColumnName="execdes" />
+          <ScalarProperty Name="exectime" ColumnName="exectime" />
+          <ScalarProperty Name="uploadtime" ColumnName="uploadtime" />
+          <ScalarProperty Name="storetime" ColumnName="storetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_HARDWARE_STATE">
+      <EntityTypeMapping TypeName="serverModel.TH_HARDWARE_STATE">
+        <MappingFragment StoreEntitySet="TH_HARDWARE_STATE">
+          <ScalarProperty Name="recordid" ColumnName="recordid" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="errornum" ColumnName="errornum" />
+          <ScalarProperty Name="producetime" ColumnName="producetime" />
+          <ScalarProperty Name="uploadtime" ColumnName="uploadtime" />
+          <ScalarProperty Name="storetime" ColumnName="storetime" />
+          <ScalarProperty Name="savetype" ColumnName="savetype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_MANUAL_RECORD">
+      <EntityTypeMapping TypeName="serverModel.TH_MANUAL_RECORD">
+        <MappingFragment StoreEntitySet="TH_MANUAL_RECORD">
+          <ScalarProperty Name="recordid" ColumnName="recordid" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="operater" ColumnName="operater" />
+          <ScalarProperty Name="operatingtype" ColumnName="operatingtype" />
+          <ScalarProperty Name="operatingstate" ColumnName="operatingstate" />
+          <ScalarProperty Name="statelevel" ColumnName="statelevel" />
+          <ScalarProperty Name="operatingtime" ColumnName="operatingtime" />
+          <ScalarProperty Name="uploadtime" ColumnName="uploadtime" />
+          <ScalarProperty Name="storetime" ColumnName="storetime" />
+          <ScalarProperty Name="savetype" ColumnName="savetype" />
+          <ScalarProperty Name="errordes" ColumnName="errordes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_SOFTWARE_STATE">
+      <EntityTypeMapping TypeName="serverModel.TH_SOFTWARE_STATE">
+        <MappingFragment StoreEntitySet="TH_SOFTWARE_STATE">
+          <ScalarProperty Name="recordid" ColumnName="recordid" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="errornum" ColumnName="errornum" />
+          <ScalarProperty Name="modulename" ColumnName="modulename" />
+          <ScalarProperty Name="statelevel" ColumnName="statelevel" />
+          <ScalarProperty Name="producetime" ColumnName="producetime" />
+          <ScalarProperty Name="uploadtime" ColumnName="uploadtime" />
+          <ScalarProperty Name="storetime" ColumnName="storetime" />
+          <ScalarProperty Name="savetype" ColumnName="savetype" />
+          <ScalarProperty Name="errordes" ColumnName="errordes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_SOCKETLIB_CONFIG">
+      <EntityTypeMapping TypeName="serverModel.TS_SOCKETLIB_CONFIG">
+        <MappingFragment StoreEntitySet="TS_SOCKETLIB_CONFIG">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="nodecomputername" ColumnName="nodecomputername" />
+          <ScalarProperty Name="cityname" ColumnName="cityname" />
+          <ScalarProperty Name="linename" ColumnName="linename" />
+          <ScalarProperty Name="stationname" ColumnName="stationname" />
+          <ScalarProperty Name="terminaltype" ColumnName="terminaltype" />
+          <ScalarProperty Name="clienttype" ColumnName="clienttype" />
+          <ScalarProperty Name="stationseq" ColumnName="stationseq" />
+          <ScalarProperty Name="projectname" ColumnName="projectname" />
+          <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+          <ScalarProperty Name="modifier" ColumnName="modifier" />
+          <ScalarProperty Name="verifier" ColumnName="verifier" />
+          <ScalarProperty Name="usedmark" ColumnName="usedmark" />
+          <ScalarProperty Name="citycode" ColumnName="citycode" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="screentype" ColumnName="screentype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TD_UPDATE_STATE">
+      <EntityTypeMapping TypeName="serverModel.TD_UPDATE_STATE">
+        <MappingFragment StoreEntitySet="TD_UPDATE_STATE">
+          <ScalarProperty Name="updatenum" ColumnName="updatenum" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="bdownload" ColumnName="bdownload" />
+          <ScalarProperty Name="downloadtime" ColumnName="downloadtime" />
+          <ScalarProperty Name="bcompletion" ColumnName="bcompletion" />
+          <ScalarProperty Name="completiontime" ColumnName="completiontime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TD_VOTE_OPTION">
+      <EntityTypeMapping TypeName="serverModel.TD_VOTE_OPTION">
+        <MappingFragment StoreEntitySet="TD_VOTE_OPTION">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="VoteItemText" ColumnName="VoteItemText" />
+          <ScalarProperty Name="VoteItemOption" ColumnName="VoteItemOption" />
+          <ScalarProperty Name="VoteItemOptionText" ColumnName="VoteItemOptionText" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_COMMAND_RECORD">
+      <EntityTypeMapping TypeName="serverModel.TH_COMMAND_RECORD">
+        <MappingFragment StoreEntitySet="TH_COMMAND_RECORD">
+          <ScalarProperty Name="recordid" ColumnName="recordid" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="commandnum" ColumnName="commandnum" />
+          <ScalarProperty Name="commanddata" ColumnName="commanddata" />
+          <ScalarProperty Name="storetime" ColumnName="storetime" />
+          <ScalarProperty Name="destdes" ColumnName="destdes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_OFFLINE_RECORD">
+      <EntityTypeMapping TypeName="serverModel.TH_OFFLINE_RECORD">
+        <MappingFragment StoreEntitySet="TH_OFFLINE_RECORD">
+          <ScalarProperty Name="recordid" ColumnName="recordid" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="cityname" ColumnName="cityname" />
+          <ScalarProperty Name="linename" ColumnName="linename" />
+          <ScalarProperty Name="stationname" ColumnName="stationname" />
+          <ScalarProperty Name="terminaltype" ColumnName="terminaltype" />
+          <ScalarProperty Name="clienttype" ColumnName="clienttype" />
+          <ScalarProperty Name="projectname" ColumnName="projectname" />
+          <ScalarProperty Name="lastconnecttime" ColumnName="lastconnecttime" />
+          <ScalarProperty Name="savetype" ColumnName="savetype" />
+          <ScalarProperty Name="offlinetime" ColumnName="offlinetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_PRIZE_RECORD">
+      <EntityTypeMapping TypeName="serverModel.TH_PRIZE_RECORD">
+        <MappingFragment StoreEntitySet="TH_PRIZE_RECORD">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="VisualId" ColumnName="VisualId" />
+          <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+          <ScalarProperty Name="PrizeUserCode" ColumnName="PrizeUserCode" />
+          <ScalarProperty Name="PrizeTime" ColumnName="PrizeTime" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_PRIZE_RULE">
+      <EntityTypeMapping TypeName="serverModel.TH_PRIZE_RULE">
+        <MappingFragment StoreEntitySet="TH_PRIZE_RULE">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="PrizeRule" ColumnName="PrizeRule" />
+          <ScalarProperty Name="RuleData" ColumnName="RuleData" />
+          <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="MaxPrize" ColumnName="MaxPrize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_UPDATE_RECORD">
+      <EntityTypeMapping TypeName="serverModel.TH_UPDATE_RECORD">
+        <MappingFragment StoreEntitySet="TH_UPDATE_RECORD">
+          <ScalarProperty Name="updatenum" ColumnName="updatenum" />
+          <ScalarProperty Name="hardsn" ColumnName="hardsn" />
+          <ScalarProperty Name="computername" ColumnName="computername" />
+          <ScalarProperty Name="uptime" ColumnName="uptime" />
+          <ScalarProperty Name="downtime" ColumnName="downtime" />
+          <ScalarProperty Name="destdes" ColumnName="destdes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_VOTE_RECORD">
+      <EntityTypeMapping TypeName="serverModel.TH_VOTE_RECORD">
+        <MappingFragment StoreEntitySet="TH_VOTE_RECORD">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="VisualId" ColumnName="VisualId" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+          <ScalarProperty Name="VoteItem" ColumnName="VoteItem" />
+          <ScalarProperty Name="VoteTime" ColumnName="VoteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TH_VOTE_TOTAL">
+      <EntityTypeMapping TypeName="serverModel.TH_VOTE_TOTAL">
+        <MappingFragment StoreEntitySet="TH_VOTE_TOTAL">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="VoteItemA" ColumnName="VoteItemA" />
+          <ScalarProperty Name="VoteItemB" ColumnName="VoteItemB" />
+          <ScalarProperty Name="VoteItemC" ColumnName="VoteItemC" />
+          <ScalarProperty Name="VoteItemD" ColumnName="VoteItemD" />
+          <ScalarProperty Name="VoteItemE" ColumnName="VoteItemE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_COMMAND_NUM">
+      <EntityTypeMapping TypeName="serverModel.TS_COMMAND_NUM">
+        <MappingFragment StoreEntitySet="TS_COMMAND_NUM">
+          <ScalarProperty Name="controlnum" ColumnName="controlnum" />
+          <ScalarProperty Name="controltype" ColumnName="controltype" />
+          <ScalarProperty Name="controlname" ColumnName="controlname" />
+          <ScalarProperty Name="controldes" ColumnName="controldes" />
+          <ScalarProperty Name="statelevel" ColumnName="statelevel" />
+          <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+          <ScalarProperty Name="modifier" ColumnName="modifier" />
+          <ScalarProperty Name="verifier" ColumnName="verifier" />
+          <ScalarProperty Name="usedmark" ColumnName="usedmark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_HARDWARE_STATENUM">
+      <EntityTypeMapping TypeName="serverModel.TS_HARDWARE_STATENUM">
+        <MappingFragment StoreEntitySet="TS_HARDWARE_STATENUM">
+          <ScalarProperty Name="errornum" ColumnName="errornum" />
+          <ScalarProperty Name="statelevel" ColumnName="statelevel" />
+          <ScalarProperty Name="subdevicetype" ColumnName="subdevicetype" />
+          <ScalarProperty Name="subdevicename" ColumnName="subdevicename" />
+          <ScalarProperty Name="subdevicedes" ColumnName="subdevicedes" />
+          <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+          <ScalarProperty Name="modifier" ColumnName="modifier" />
+          <ScalarProperty Name="verifier" ColumnName="verifier" />
+          <ScalarProperty Name="usedmark" ColumnName="usedmark" />
+          <ScalarProperty Name="errordes" ColumnName="errordes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TS_HARDWARE_TYPE">
+      <EntityTypeMapping TypeName="serverModel.TS_HARDWARE_TYPE">
+        <MappingFragment StoreEntitySet="TS_HARDWARE_TYPE">
+          <ScalarProperty Name="devicetype" ColumnName="devicetype" />
+          <ScalarProperty Name="devicename" ColumnName="devicename" />
+          <ScalarProperty Name="subdevicetype" ColumnName="subdevicetype" />
+          <ScalarProperty Name="subdevicename" ColumnName="subdevicename" />
+          <ScalarProperty Name="subdevicedes" ColumnName="subdevicedes" />
+          <ScalarProperty Name="modifytime" ColumnName="modifytime" />
+          <ScalarProperty Name="modifier" ColumnName="modifier" />
+          <ScalarProperty Name="verifier" ColumnName="verifier" />
+          <ScalarProperty Name="usedmark" ColumnName="usedmark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

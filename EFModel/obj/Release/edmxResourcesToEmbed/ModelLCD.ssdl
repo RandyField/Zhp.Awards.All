@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="serverModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="ActivityVote_SMS">
+    <Key>
+      <PropertyRef Name="ActivityVoteID" />
+    </Key>
+    <Property Name="ActivityVoteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VoteID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="VoteRank" Type="int" />
+    <Property Name="SMS1EndType" Type="int" />
+    <Property Name="SMS1SendTime" Type="datetime" />
+    <Property Name="SMS1EndTime" Type="datetime" />
+    <Property Name="SMS2EndType" Type="int" />
+    <Property Name="SMS2ReceiveTime" Type="datetime" />
+    <Property Name="SMS2SendTime" Type="datetime" />
+    <Property Name="SMS2EndTime" Type="datetime" />
+    <Property Name="Information" Type="nvarchar" MaxLength="200" />
+    <Property Name="InfoMark" Type="nvarchar" MaxLength="200" />
+    <Property Name="updatetime" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“socketlib_server.dbo.TD_CHECK_CONFIG”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="TD_CHECK_CONFIG">
+          <Property Name="RecordId" Type="varchar" MaxLength="50" />
+          <Property Name="ComputerName" Type="varchar" MaxLength="20" />
+          <Property Name="HardSn" Type="varchar" MaxLength="20" />
+          <Property Name="IsCheckWeibo" Type="int" />
+          <Property Name="IsUsed" Type="int" />
+        </EntityType>-->
+  <EntityType Name="TD_COMMAND_STATE">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" />
+    <Property Name="computername" Type="nchar" MaxLength="16" />
+    <Property Name="commandnum" Type="nchar" MaxLength="15" />
+    <Property Name="execstate" Type="nchar" MaxLength="3" />
+    <Property Name="execdes" Type="nvarchar" MaxLength="200" />
+    <Property Name="exectime" Type="datetime" />
+    <Property Name="uploadtime" Type="datetime" />
+    <Property Name="storetime" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“socketlib_server.dbo.TD_MAIL_CHECK”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="TD_MAIL_CHECK">
+          <Property Name="RecordId" Type="varchar" MaxLength="50" />
+          <Property Name="Account" Type="varchar" MaxLength="50" />
+          <Property Name="PicturePath" Type="varchar" MaxLength="100" />
+          <Property Name="Title" Type="varchar" MaxLength="50" />
+          <Property Name="Content" Type="varchar" MaxLength="500" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="ComputerName" Type="varchar" MaxLength="20" />
+          <Property Name="HardSn" Type="varchar" MaxLength="20" />
+          <Property Name="IsSend" Type="int" />
+          <Property Name="IsChecked" Type="int" />
+        </EntityType>-->
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“socketlib_server.dbo.TD_PHOTO_CHECK”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="TD_PHOTO_CHECK">
+          <Property Name="RecordId" Type="varchar" MaxLength="50" />
+          <Property Name="PicturePath" Type="varchar" MaxLength="100" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="ComputerName" Type="varchar" MaxLength="20" />
+          <Property Name="HardSn" Type="varchar" MaxLength="20" />
+          <Property Name="IsChecked" Type="int" />
+          <Property Name="IsAllowed" Type="int" />
+        </EntityType>-->
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TD_UPDATE_STATE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TD_UPDATE_STATE">
+    <Key>
+      <PropertyRef Name="updatenum" />
+      <PropertyRef Name="hardsn" />
+      <PropertyRef Name="computername" />
+    </Key>
+    <Property Name="updatenum" Type="nchar" MaxLength="40" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="computername" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="bdownload" Type="nchar" MaxLength="3" />
+    <Property Name="downloadtime" Type="datetime" />
+    <Property Name="bcompletion" Type="nchar" MaxLength="3" />
+    <Property Name="completiontime" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TD_VOTE_OPTION”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TD_VOTE_OPTION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityId" Type="varchar" MaxLength="25" />
+    <Property Name="VoteItemText" Type="varchar" MaxLength="50" />
+    <Property Name="VoteItemOption" Type="varchar" MaxLength="5" />
+    <Property Name="VoteItemOptionText" Type="varchar" MaxLength="100" />
+    <Property Name="AddDate" Type="datetime" />
+    <Property Name="BeginTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6013: 表/视图“socketlib_server.dbo.TD_WEIBO_CHECK”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="TD_WEIBO_CHECK">
+          <Property Name="RecordId" Type="varchar" MaxLength="50" />
+          <Property Name="Account" Type="varchar" MaxLength="50" />
+          <Property Name="PicturePath" Type="varchar" MaxLength="100" />
+          <Property Name="Content" Type="varchar" MaxLength="500" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="ComputerName" Type="varchar" MaxLength="20" />
+          <Property Name="HardSn" Type="varchar" MaxLength="20" />
+          <Property Name="IsSend" Type="int" />
+          <Property Name="IsChecked" Type="int" />
+        </EntityType>-->
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TH_COMMAND_RECORD”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TH_COMMAND_RECORD">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" />
+    <Property Name="computername" Type="nchar" MaxLength="16" />
+    <Property Name="commandnum" Type="nchar" MaxLength="6" />
+    <Property Name="commanddata" Type="image" />
+    <Property Name="storetime" Type="datetime" />
+    <Property Name="destdes" Type="image" />
+  </EntityType>
+  <EntityType Name="TH_HARDWARE_STATE">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="computername" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="errornum" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="producetime" Type="datetime" />
+    <Property Name="uploadtime" Type="datetime" />
+    <Property Name="storetime" Type="datetime" />
+    <Property Name="savetype" Type="nchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TH_MANUAL_RECORD">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" />
+    <Property Name="computername" Type="nchar" MaxLength="16" />
+    <Property Name="operater" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="operatingtype" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="operatingstate" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="statelevel" Type="nchar" MaxLength="3" />
+    <Property Name="operatingtime" Type="datetime" />
+    <Property Name="uploadtime" Type="datetime" />
+    <Property Name="storetime" Type="datetime" />
+    <Property Name="savetype" Type="nchar" MaxLength="1" />
+    <Property Name="errordes" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TH_OFFLINE_RECORD”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TH_OFFLINE_RECORD">
+    <Key>
+      <PropertyRef Name="recordid" />
+      <PropertyRef Name="hardsn" />
+      <PropertyRef Name="computername" />
+      <PropertyRef Name="cityname" />
+      <PropertyRef Name="linename" />
+      <PropertyRef Name="stationname" />
+      <PropertyRef Name="terminaltype" />
+      <PropertyRef Name="clienttype" />
+      <PropertyRef Name="projectname" />
+      <PropertyRef Name="offlinetime" />
+    </Key>
+    <Property Name="recordid" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="computername" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="cityname" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="linename" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="stationname" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="terminaltype" Type="nchar" MaxLength="2" Nullable="false" />
+    <Property Name="clienttype" Type="int" Nullable="false" />
+    <Property Name="projectname" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="lastconnecttime" Type="datetime" />
+    <Property Name="savetype" Type="nchar" MaxLength="1" />
+    <Property Name="offlinetime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TH_PRIZE_RECORD”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TH_PRIZE_RECORD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityId" Type="varchar" MaxLength="25" />
+    <Property Name="Contact" Type="varchar" MaxLength="40" />
+    <Property Name="VisualId" Type="varchar" MaxLength="25" />
+    <Property Name="ContactType" Type="int" />
+    <Property Name="PrizeUserCode" Type="varchar" MaxLength="65" />
+    <Property Name="PrizeTime" Type="datetime" />
+    <Property Name="Address" Type="varchar" MaxLength="400" />
+    <Property Name="Status" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TH_PRIZE_RULE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TH_PRIZE_RULE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityId" Type="varchar" MaxLength="25" />
+    <Property Name="PrizeRule" Type="int" />
+    <Property Name="RuleData" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="BeginTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="MaxPrize" Type="int" />
+  </EntityType>
+  <EntityType Name="TH_SOFTWARE_STATE">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" />
+    <Property Name="computername" Type="nchar" MaxLength="16" />
+    <Property Name="errornum" Type="nchar" MaxLength="6" />
+    <Property Name="modulename" Type="nchar" MaxLength="41" />
+    <Property Name="statelevel" Type="char" MaxLength="3" />
+    <Property Name="producetime" Type="datetime" />
+    <Property Name="uploadtime" Type="datetime" />
+    <Property Name="storetime" Type="datetime" />
+    <Property Name="savetype" Type="nchar" MaxLength="1" />
+    <Property Name="errordes" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TH_UPDATE_RECORD”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TH_UPDATE_RECORD">
+    <Key>
+      <PropertyRef Name="updatenum" />
+      <PropertyRef Name="hardsn" />
+      <PropertyRef Name="computername" />
+    </Key>
+    <Property Name="updatenum" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="computername" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="uptime" Type="datetime" />
+    <Property Name="downtime" Type="datetime" />
+    <Property Name="destdes" Type="image" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TH_VOTE_RECORD”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TH_VOTE_RECORD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityId" Type="varchar" MaxLength="25" />
+    <Property Name="ComputerName" Type="varchar" MaxLength="16" />
+    <Property Name="VisualId" Type="varchar" MaxLength="25" />
+    <Property Name="Contact" Type="varchar" MaxLength="41" />
+    <Property Name="ContactType" Type="int" />
+    <Property Name="VoteItem" Type="varchar" MaxLength="5" />
+    <Property Name="VoteTime" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TH_VOTE_TOTAL”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TH_VOTE_TOTAL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityId" Type="varchar" MaxLength="25" />
+    <Property Name="VoteItemA" Type="int" />
+    <Property Name="VoteItemB" Type="int" />
+    <Property Name="VoteItemC" Type="int" />
+    <Property Name="VoteItemD" Type="int" />
+    <Property Name="VoteItemE" Type="int" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TS_COMMAND_NUM”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TS_COMMAND_NUM">
+    <Key>
+      <PropertyRef Name="controlnum" />
+      <PropertyRef Name="statelevel" />
+      <PropertyRef Name="modifytime" />
+      <PropertyRef Name="usedmark" />
+    </Key>
+    <Property Name="controlnum" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="controltype" Type="nchar" MaxLength="2" />
+    <Property Name="controlname" Type="nchar" MaxLength="10" />
+    <Property Name="controldes" Type="nchar" MaxLength="41" />
+    <Property Name="statelevel" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="modifytime" Type="datetime" Nullable="false" />
+    <Property Name="modifier" Type="nchar" MaxLength="21" />
+    <Property Name="verifier" Type="nchar" MaxLength="21" />
+    <Property Name="usedmark" Type="nchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TS_HARDWARE_STATENUM”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TS_HARDWARE_STATENUM">
+    <Key>
+      <PropertyRef Name="errornum" />
+      <PropertyRef Name="statelevel" />
+      <PropertyRef Name="usedmark" />
+      <PropertyRef Name="errordes" />
+    </Key>
+    <Property Name="errornum" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="statelevel" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="subdevicetype" Type="nchar" MaxLength="3" />
+    <Property Name="subdevicename" Type="nchar" MaxLength="21" />
+    <Property Name="subdevicedes" Type="nchar" MaxLength="21" />
+    <Property Name="modifytime" Type="datetime" />
+    <Property Name="modifier" Type="nchar" MaxLength="21" />
+    <Property Name="verifier" Type="nchar" MaxLength="21" />
+    <Property Name="usedmark" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="errordes" Type="nchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <!--生成过程中发现错误:
+警告 6002: 表/视图“socketlib_server.dbo.TS_HARDWARE_TYPE”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+  <EntityType Name="TS_HARDWARE_TYPE">
+    <Key>
+      <PropertyRef Name="devicetype" />
+      <PropertyRef Name="devicename" />
+      <PropertyRef Name="subdevicetype" />
+      <PropertyRef Name="subdevicename" />
+      <PropertyRef Name="subdevicedes" />
+      <PropertyRef Name="modifytime" />
+      <PropertyRef Name="usedmark" />
+    </Key>
+    <Property Name="devicetype" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="devicename" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="subdevicetype" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="subdevicename" Type="nchar" MaxLength="21" Nullable="false" />
+    <Property Name="subdevicedes" Type="nchar" MaxLength="21" Nullable="false" />
+    <Property Name="modifytime" Type="datetime" Nullable="false" />
+    <Property Name="modifier" Type="nchar" MaxLength="21" />
+    <Property Name="verifier" Type="nchar" MaxLength="21" />
+    <Property Name="usedmark" Type="nchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TS_SOCKETLIB_CONFIG">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="computername" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="nodecomputername" Type="nchar" MaxLength="16" />
+    <Property Name="cityname" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="linename" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="stationname" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="terminaltype" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="clienttype" Type="int" Nullable="false" />
+    <Property Name="stationseq" Type="int" />
+    <Property Name="projectname" Type="nchar" MaxLength="21" Nullable="false" />
+    <Property Name="modifytime" Type="datetime" />
+    <Property Name="modifier" Type="nchar" MaxLength="21" />
+    <Property Name="verifier" Type="nchar" MaxLength="21" />
+    <Property Name="usedmark" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="citycode" Type="nchar" MaxLength="3" />
+    <Property Name="position" Type="nchar" MaxLength="41" />
+    <Property Name="screentype" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="serverModelStoreContainer">
+    <EntitySet Name="ActivityVote_SMS" EntityType="Self.ActivityVote_SMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TD_COMMAND_STATE" EntityType="Self.TD_COMMAND_STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TH_HARDWARE_STATE" EntityType="Self.TH_HARDWARE_STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TH_MANUAL_RECORD" EntityType="Self.TH_MANUAL_RECORD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TH_SOFTWARE_STATE" EntityType="Self.TH_SOFTWARE_STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TS_SOCKETLIB_CONFIG" EntityType="Self.TS_SOCKETLIB_CONFIG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TD_UPDATE_STATE" EntityType="Self.TD_UPDATE_STATE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TD_UPDATE_STATE].[updatenum] AS [updatenum], 
+[TD_UPDATE_STATE].[hardsn] AS [hardsn], 
+[TD_UPDATE_STATE].[computername] AS [computername], 
+[TD_UPDATE_STATE].[bdownload] AS [bdownload], 
+[TD_UPDATE_STATE].[downloadtime] AS [downloadtime], 
+[TD_UPDATE_STATE].[bcompletion] AS [bcompletion], 
+[TD_UPDATE_STATE].[completiontime] AS [completiontime]
+FROM [dbo].[TD_UPDATE_STATE] AS [TD_UPDATE_STATE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TD_VOTE_OPTION" EntityType="Self.TD_VOTE_OPTION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TD_VOTE_OPTION].[Id] AS [Id], 
+[TD_VOTE_OPTION].[ActivityId] AS [ActivityId], 
+[TD_VOTE_OPTION].[VoteItemText] AS [VoteItemText], 
+[TD_VOTE_OPTION].[VoteItemOption] AS [VoteItemOption], 
+[TD_VOTE_OPTION].[VoteItemOptionText] AS [VoteItemOptionText], 
+[TD_VOTE_OPTION].[AddDate] AS [AddDate], 
+[TD_VOTE_OPTION].[BeginTime] AS [BeginTime], 
+[TD_VOTE_OPTION].[EndTime] AS [EndTime]
+FROM [dbo].[TD_VOTE_OPTION] AS [TD_VOTE_OPTION]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TH_COMMAND_RECORD" EntityType="Self.TH_COMMAND_RECORD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TH_COMMAND_RECORD].[recordid] AS [recordid], 
+[TH_COMMAND_RECORD].[hardsn] AS [hardsn], 
+[TH_COMMAND_RECORD].[computername] AS [computername], 
+[TH_COMMAND_RECORD].[commandnum] AS [commandnum], 
+[TH_COMMAND_RECORD].[commanddata] AS [commanddata], 
+[TH_COMMAND_RECORD].[storetime] AS [storetime], 
+[TH_COMMAND_RECORD].[destdes] AS [destdes]
+FROM [dbo].[TH_COMMAND_RECORD] AS [TH_COMMAND_RECORD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TH_OFFLINE_RECORD" EntityType="Self.TH_OFFLINE_RECORD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TH_OFFLINE_RECORD].[recordid] AS [recordid], 
+[TH_OFFLINE_RECORD].[hardsn] AS [hardsn], 
+[TH_OFFLINE_RECORD].[computername] AS [computername], 
+[TH_OFFLINE_RECORD].[cityname] AS [cityname], 
+[TH_OFFLINE_RECORD].[linename] AS [linename], 
+[TH_OFFLINE_RECORD].[stationname] AS [stationname], 
+[TH_OFFLINE_RECORD].[terminaltype] AS [terminaltype], 
+[TH_OFFLINE_RECORD].[clienttype] AS [clienttype], 
+[TH_OFFLINE_RECORD].[projectname] AS [projectname], 
+[TH_OFFLINE_RECORD].[lastconnecttime] AS [lastconnecttime], 
+[TH_OFFLINE_RECORD].[savetype] AS [savetype], 
+[TH_OFFLINE_RECORD].[offlinetime] AS [offlinetime]
+FROM [dbo].[TH_OFFLINE_RECORD] AS [TH_OFFLINE_RECORD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TH_PRIZE_RECORD" EntityType="Self.TH_PRIZE_RECORD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TH_PRIZE_RECORD].[Id] AS [Id], 
+[TH_PRIZE_RECORD].[ActivityId] AS [ActivityId], 
+[TH_PRIZE_RECORD].[Contact] AS [Contact], 
+[TH_PRIZE_RECORD].[VisualId] AS [VisualId], 
+[TH_PRIZE_RECORD].[ContactType] AS [ContactType], 
+[TH_PRIZE_RECORD].[PrizeUserCode] AS [PrizeUserCode], 
+[TH_PRIZE_RECORD].[PrizeTime] AS [PrizeTime], 
+[TH_PRIZE_RECORD].[Address] AS [Address], 
+[TH_PRIZE_RECORD].[Status] AS [Status]
+FROM [dbo].[TH_PRIZE_RECORD] AS [TH_PRIZE_RECORD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TH_PRIZE_RULE" EntityType="Self.TH_PRIZE_RULE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TH_PRIZE_RULE].[Id] AS [Id], 
+[TH_PRIZE_RULE].[ActivityId] AS [ActivityId], 
+[TH_PRIZE_RULE].[PrizeRule] AS [PrizeRule], 
+[TH_PRIZE_RULE].[RuleData] AS [RuleData], 
+[TH_PRIZE_RULE].[BeginTime] AS [BeginTime], 
+[TH_PRIZE_RULE].[EndTime] AS [EndTime], 
+[TH_PRIZE_RULE].[MaxPrize] AS [MaxPrize]
+FROM [dbo].[TH_PRIZE_RULE] AS [TH_PRIZE_RULE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TH_UPDATE_RECORD" EntityType="Self.TH_UPDATE_RECORD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TH_UPDATE_RECORD].[updatenum] AS [updatenum], 
+[TH_UPDATE_RECORD].[hardsn] AS [hardsn], 
+[TH_UPDATE_RECORD].[computername] AS [computername], 
+[TH_UPDATE_RECORD].[uptime] AS [uptime], 
+[TH_UPDATE_RECORD].[downtime] AS [downtime], 
+[TH_UPDATE_RECORD].[destdes] AS [destdes]
+FROM [dbo].[TH_UPDATE_RECORD] AS [TH_UPDATE_RECORD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TH_VOTE_RECORD" EntityType="Self.TH_VOTE_RECORD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TH_VOTE_RECORD].[Id] AS [Id], 
+[TH_VOTE_RECORD].[ActivityId] AS [ActivityId], 
+[TH_VOTE_RECORD].[ComputerName] AS [ComputerName], 
+[TH_VOTE_RECORD].[VisualId] AS [VisualId], 
+[TH_VOTE_RECORD].[Contact] AS [Contact], 
+[TH_VOTE_RECORD].[ContactType] AS [ContactType], 
+[TH_VOTE_RECORD].[VoteItem] AS [VoteItem], 
+[TH_VOTE_RECORD].[VoteTime] AS [VoteTime]
+FROM [dbo].[TH_VOTE_RECORD] AS [TH_VOTE_RECORD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TH_VOTE_TOTAL" EntityType="Self.TH_VOTE_TOTAL" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TH_VOTE_TOTAL].[Id] AS [Id], 
+[TH_VOTE_TOTAL].[ActivityId] AS [ActivityId], 
+[TH_VOTE_TOTAL].[VoteItemA] AS [VoteItemA], 
+[TH_VOTE_TOTAL].[VoteItemB] AS [VoteItemB], 
+[TH_VOTE_TOTAL].[VoteItemC] AS [VoteItemC], 
+[TH_VOTE_TOTAL].[VoteItemD] AS [VoteItemD], 
+[TH_VOTE_TOTAL].[VoteItemE] AS [VoteItemE]
+FROM [dbo].[TH_VOTE_TOTAL] AS [TH_VOTE_TOTAL]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TS_COMMAND_NUM" EntityType="Self.TS_COMMAND_NUM" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TS_COMMAND_NUM].[controlnum] AS [controlnum], 
+[TS_COMMAND_NUM].[controltype] AS [controltype], 
+[TS_COMMAND_NUM].[controlname] AS [controlname], 
+[TS_COMMAND_NUM].[controldes] AS [controldes], 
+[TS_COMMAND_NUM].[statelevel] AS [statelevel], 
+[TS_COMMAND_NUM].[modifytime] AS [modifytime], 
+[TS_COMMAND_NUM].[modifier] AS [modifier], 
+[TS_COMMAND_NUM].[verifier] AS [verifier], 
+[TS_COMMAND_NUM].[usedmark] AS [usedmark]
+FROM [dbo].[TS_COMMAND_NUM] AS [TS_COMMAND_NUM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TS_HARDWARE_STATENUM" EntityType="Self.TS_HARDWARE_STATENUM" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TS_HARDWARE_STATENUM].[errornum] AS [errornum], 
+[TS_HARDWARE_STATENUM].[statelevel] AS [statelevel], 
+[TS_HARDWARE_STATENUM].[subdevicetype] AS [subdevicetype], 
+[TS_HARDWARE_STATENUM].[subdevicename] AS [subdevicename], 
+[TS_HARDWARE_STATENUM].[subdevicedes] AS [subdevicedes], 
+[TS_HARDWARE_STATENUM].[modifytime] AS [modifytime], 
+[TS_HARDWARE_STATENUM].[modifier] AS [modifier], 
+[TS_HARDWARE_STATENUM].[verifier] AS [verifier], 
+[TS_HARDWARE_STATENUM].[usedmark] AS [usedmark], 
+[TS_HARDWARE_STATENUM].[errordes] AS [errordes]
+FROM [dbo].[TS_HARDWARE_STATENUM] AS [TS_HARDWARE_STATENUM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TS_HARDWARE_TYPE" EntityType="Self.TS_HARDWARE_TYPE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TS_HARDWARE_TYPE].[devicetype] AS [devicetype], 
+[TS_HARDWARE_TYPE].[devicename] AS [devicename], 
+[TS_HARDWARE_TYPE].[subdevicetype] AS [subdevicetype], 
+[TS_HARDWARE_TYPE].[subdevicename] AS [subdevicename], 
+[TS_HARDWARE_TYPE].[subdevicedes] AS [subdevicedes], 
+[TS_HARDWARE_TYPE].[modifytime] AS [modifytime], 
+[TS_HARDWARE_TYPE].[modifier] AS [modifier], 
+[TS_HARDWARE_TYPE].[verifier] AS [verifier], 
+[TS_HARDWARE_TYPE].[usedmark] AS [usedmark]
+FROM [dbo].[TS_HARDWARE_TYPE] AS [TS_HARDWARE_TYPE]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

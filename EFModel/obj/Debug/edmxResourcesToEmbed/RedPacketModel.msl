@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZhpRedModelStoreContainer" CdmEntityContainer="ZhpRedEntities">
+    <EntitySetMapping Name="TRF_WeChatUserInfo">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRF_WeChatUserInfo">
+        <MappingFragment StoreEntitySet="TRF_WeChatUserInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="openid" ColumnName="openid" />
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="language" ColumnName="language" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="headimgurl" ColumnName="headimgurl" />
+          <ScalarProperty Name="privilege" ColumnName="privilege" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_Activity">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_Activity">
+        <MappingFragment StoreEntitySet="TRP_Activity">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="TimeLength" ColumnName="TimeLength" />
+          <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+          <ScalarProperty Name="Use" ColumnName="Use" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="Expiration" ColumnName="Expiration" />
+          <ScalarProperty Name="TimeSplit" ColumnName="TimeSplit" />
+          <ScalarProperty Name="LastEndTime" ColumnName="LastEndTime" />
+          <ScalarProperty Name="Recycling" ColumnName="Recycling" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_ActivityAwardDetail">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_ActivityAwardDetail">
+        <MappingFragment StoreEntitySet="TRP_ActivityAwardDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="AwardDetailId" ColumnName="AwardDetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_Award">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_Award">
+        <MappingFragment StoreEntitySet="TRP_Award">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+          <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+          <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+          <ScalarProperty Name="Use" ColumnName="Use" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+          <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+          <ScalarProperty Name="ImageX" ColumnName="ImageX" />
+          <ScalarProperty Name="ImageY" ColumnName="ImageY" />
+          <ScalarProperty Name="ImageFontSize" ColumnName="ImageFontSize" />
+          <ScalarProperty Name="Recycling" ColumnName="Recycling" />
+          <ScalarProperty Name="ReceiveType" ColumnName="ReceiveType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_AwardCategory">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardCategory">
+        <MappingFragment StoreEntitySet="TRP_AwardCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardCategoryName" ColumnName="AwardCategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_AwardCategoryProportion">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardCategoryProportion">
+        <MappingFragment StoreEntitySet="TRP_AwardCategoryProportion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="Proportion" ColumnName="Proportion" />
+          <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_AwardDetail">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardDetail">
+        <MappingFragment StoreEntitySet="TRP_AwardDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+          <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+          <ScalarProperty Name="AwardCode" ColumnName="AwardCode" />
+          <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+          <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+          <ScalarProperty Name="AwardUrl" ColumnName="AwardUrl" />
+          <ScalarProperty Name="AppearTime" ColumnName="AppearTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_AwardReceive">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardReceive">
+        <MappingFragment StoreEntitySet="TRP_AwardReceive">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+          <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+          <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="SubmitTime" ColumnName="SubmitTime" />
+          <ScalarProperty Name="ReceiveTime" ColumnName="ReceiveTime" />
+          <ScalarProperty Name="AwardDetailId" ColumnName="AwardDetailId" />
+          <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_AwardType">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardType">
+        <MappingFragment StoreEntitySet="TRP_AwardType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_AwardTypeProportion">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardTypeProportion">
+        <MappingFragment StoreEntitySet="TRP_AwardTypeProportion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+          <ScalarProperty Name="Mlecule" ColumnName="Mlecule" />
+          <ScalarProperty Name="Downstairs" ColumnName="Downstairs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_ClientLog">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_ClientLog">
+        <MappingFragment StoreEntitySet="TRP_ClientLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="PageDesc" ColumnName="PageDesc" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_Award_bak">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_Award_bak">
+        <MappingFragment StoreEntitySet="TRP_Award_bak">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+          <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+          <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+          <ScalarProperty Name="Use" ColumnName="Use" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+          <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+          <ScalarProperty Name="ImageX" ColumnName="ImageX" />
+          <ScalarProperty Name="ImageY" ColumnName="ImageY" />
+          <ScalarProperty Name="ImageFontSize" ColumnName="ImageFontSize" />
+          <ScalarProperty Name="Recycling" ColumnName="Recycling" />
+          <ScalarProperty Name="ReceiveType" ColumnName="ReceiveType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_ClientLog_bak">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_ClientLog_bak">
+        <MappingFragment StoreEntitySet="TRP_ClientLog_bak">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="PageDesc" ColumnName="PageDesc" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Activity">
+      <EntityTypeMapping TypeName="ZhpRedModel.View_Activity">
+        <MappingFragment StoreEntitySet="View_Activity">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="TimeLength" ColumnName="TimeLength" />
+          <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+          <ScalarProperty Name="Use" ColumnName="Use" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="Expiration" ColumnName="Expiration" />
+          <ScalarProperty Name="TimeSplit" ColumnName="TimeSplit" />
+          <ScalarProperty Name="LastEndTime" ColumnName="LastEndTime" />
+          <ScalarProperty Name="delm" ColumnName="delm" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_Award">
+      <EntityTypeMapping TypeName="ZhpRedModel.View_Award">
+        <MappingFragment StoreEntitySet="View_Award">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+          <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+          <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+          <ScalarProperty Name="Use" ColumnName="Use" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+          <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+          <ScalarProperty Name="AwardCategoryName" ColumnName="AwardCategoryName" />
+          <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+          <ScalarProperty Name="ImageX" ColumnName="ImageX" />
+          <ScalarProperty Name="ImageY" ColumnName="ImageY" />
+          <ScalarProperty Name="ImageFontSize" ColumnName="ImageFontSize" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_AwardCategory">
+      <EntityTypeMapping TypeName="ZhpRedModel.View_AwardCategory">
+        <MappingFragment StoreEntitySet="View_AwardCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardCategoryName" ColumnName="AwardCategoryName" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_AwardDetail">
+      <EntityTypeMapping TypeName="ZhpRedModel.View_AwardDetail">
+        <MappingFragment StoreEntitySet="View_AwardDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+          <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+          <ScalarProperty Name="AwardCode" ColumnName="AwardCode" />
+          <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+          <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+          <ScalarProperty Name="AwardUrl" ColumnName="AwardUrl" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+          <ScalarProperty Name="Use" ColumnName="Use" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_AwardReceive">
+      <EntityTypeMapping TypeName="ZhpRedModel.View_AwardReceive">
+        <MappingFragment StoreEntitySet="View_AwardReceive">
+          <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+          <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+          <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="SubmitTime" ColumnName="SubmitTime" />
+          <ScalarProperty Name="ReceiveTime" ColumnName="ReceiveTime" />
+          <ScalarProperty Name="AwardDetailId" ColumnName="AwardDetailId" />
+          <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+          <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+          <ScalarProperty Name="AwardCategoryName" ColumnName="AwardCategoryName" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_AwardType">
+      <EntityTypeMapping TypeName="ZhpRedModel.View_AwardType">
+        <MappingFragment StoreEntitySet="View_AwardType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_ClientLog">
+      <EntityTypeMapping TypeName="ZhpRedModel.View_ClientLog">
+        <MappingFragment StoreEntitySet="View_ClientLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="PageDesc" ColumnName="PageDesc" />
+          <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_PreciousAward">
+      <EntityTypeMapping TypeName="ZhpRedModel.View_PreciousAward">
+        <MappingFragment StoreEntitySet="View_PreciousAward">
+          <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+          <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+          <ScalarProperty Name="Enable" ColumnName="Enable" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="AppearTime" ColumnName="AppearTime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_OpenCount">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_OpenCount">
+        <MappingFragment StoreEntitySet="TRP_OpenCount">
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_ScanCount">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_ScanCount">
+        <MappingFragment StoreEntitySet="TRP_ScanCount">
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="Count" ColumnName="Count" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRP_QRCodeScanLimited">
+      <EntityTypeMapping TypeName="ZhpRedModel.TRP_QRCodeScanLimited">
+        <MappingFragment StoreEntitySet="TRP_QRCodeScanLimited">
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+          <ScalarProperty Name="QRRCode" ColumnName="QRRCode" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="LimitedCount" ColumnName="LimitedCount" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,19 @@
+﻿2017-04-01 13:33 Create  Ninject
+2017-04-01 17:24 add comment
+				UI-引用BLL，Model，NinjectDI
+						|	  |			|
+						|	  |		NinjectDI-引用Ninject,BLL,DAL,Interface
+						|	独立，不依赖
+						|
+					   引用DAL,Interface,Model
+
+
+				DAL-引用EFModel，Interface，Model，Common
+
+				Interface-引用 EFModel,Model
+
+				EFModel-独立，不依赖
+
+				Common-独立,不依赖
+
+				Untility-独立，不依赖

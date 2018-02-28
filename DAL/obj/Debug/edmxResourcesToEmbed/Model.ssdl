@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="socketlib_serverModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="TH_HARDWARE_STATE">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="computername" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="errornum" Type="nchar" MaxLength="6" Nullable="false" />
+    <Property Name="producetime" Type="datetime" />
+    <Property Name="uploadtime" Type="datetime" />
+    <Property Name="storetime" Type="datetime" />
+    <Property Name="savetype" Type="nchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TS_SOCKETLIB_CONFIG">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hardsn" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="computername" Type="nchar" MaxLength="16" Nullable="false" />
+    <Property Name="nodecomputername" Type="nchar" MaxLength="16" />
+    <Property Name="cityname" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="linename" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="stationname" Type="nchar" MaxLength="41" Nullable="false" />
+    <Property Name="terminaltype" Type="nchar" MaxLength="3" Nullable="false" />
+    <Property Name="clienttype" Type="int" Nullable="false" />
+    <Property Name="stationseq" Type="int" />
+    <Property Name="projectname" Type="nchar" MaxLength="21" Nullable="false" />
+    <Property Name="modifytime" Type="datetime" />
+    <Property Name="modifier" Type="nchar" MaxLength="21" />
+    <Property Name="verifier" Type="nchar" MaxLength="21" />
+    <Property Name="usedmark" Type="nchar" MaxLength="1" Nullable="false" />
+    <Property Name="citycode" Type="nchar" MaxLength="3" />
+    <Property Name="position" Type="nchar" MaxLength="41" />
+    <Property Name="screentype" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="socketlib_serverModelStoreContainer">
+    <EntitySet Name="TH_HARDWARE_STATE" EntityType="Self.TH_HARDWARE_STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TS_SOCKETLIB_CONFIG" EntityType="Self.TS_SOCKETLIB_CONFIG" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <title>恭喜您，中奖了</title>
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .tips {
+            position: absolute;
+            width: 5.1rem;
+            height: 1.5rem;
+            top: 1.5rem;
+            left: calc(50% - 2.5rem);
+            font-size: 0.28rem;
+            text-align: center;
+        }
+
+        #tips-content {
+            margin-left: auto;
+            margin-right: auto;
+            color: black;
+        }
+
+        #nickName {
+            position: absolute;
+            width: 6.5rem;
+            height: 1.5rem;
+            top: 0.6rem;
+            left: calc(50% - 3.25rem);
+            font-size: 0.40rem;
+            text-align: center;
+        }
+
+        #wx-name {
+            color: #fff;
+            font-family: '微软雅黑';
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .wrap {
+            position: absolute;
+            height: 92.1%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            bottom: 0.5rem;
+            left: 3.6rem;
+        }
+
+            .wrap .ipt {
+                position: absolute;
+                width: 6.5rem;
+                height: 5.5rem;
+                left: calc( 50% - 3rem);
+            }
+
+                .wrap .ipt #logo {
+                    position: absolute;
+                    right: 0.1rem;
+                }
+
+                .wrap .ipt #clickzone {
+                    position: absolute;
+                    right: 0.1rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+
+                .wrap .ipt #logo img {
+                    width: 1.2rem;
+                }
+
+                .wrap .ipt #stamp {
+                    display: none;
+                    position: absolute;
+                    bottom: 1.4rem;
+                    right: 0.2rem;
+                }
+
+                    .wrap .ipt #stamp img {
+                        width: 2.0rem;
+                    }
+
+                .wrap .ipt div.sure {
+                    margin-top: 0.2rem;
+                    background: #ffd619;
+                    font-weight: bold;
+                    font-size: 0.37rem;
+                    text-align: center;
+                    color: #fefefe;
+                    height: auto!important;
+                    height: 2rem;
+                    min-height: 1rem;
+                }
+
+        #takeAwayBtn {
+            cursor: pointer;
+        }
+
+        .modal.in .modal-dialog {
+            -webkit-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+        }
+
+        .modal-dialog {
+            position: absolute;
+            width: 4rem;
+            margin: 0px auto;
+            left: 0;
+            right: 0;
+            top: 50%;
+        }
+
+        #takeAwayBtn {
+            line-height: 0.95rem;
+            font-size: 0.7rem;
+        }
+
+
+
+        @@media (min-width:768px) {
+            .modal-dialog {
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg">
+    @*<img src="~/Content/image/ZTE/supermarket.jpg" id="topImg" style="width: 100%; height: 100%;" />*@
+
+    @switch (@ViewData["Type"].ToString())
+    {
+        case "A":
+        @: <img src="../Content/image/NewCity/100元.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "B":
+        @: <img src="../Content/image/NewCity/健身卡.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "C":
+        @: <img src="../Content/image/NewCity/圆春饼.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "D":
+        @: <img src="../Content/image/NewCity/咖啡券.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "E":
+        @: <img src="../Content/image/NewCity/公社5折券.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "F":
+        @: <img src="../Content/image/NewCity/工社3折券.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "G":
+        @: <img src="../Content/image/NewCity/美甲护理.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "H":
+        @: <img src="../Content/image/NewCity/美甲30元.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "I":
+        @: <img src="../Content/image/NewCity/一叶一生.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "J":
+        @: <img src="../Content/image/NewCity/含花束.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "K":
+        @: <img src="../Content/image/NewCity/萌宠之家.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "L":
+        @: <img src="../Content/image/NewCity/南山余闲.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "M":
+        @: <img src="../Content/image/NewCity/魅可发妆.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "N":
+        @: <img src="../Content/image/NewCity/在宥.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "O":
+        @: <img src="../Content/image/NewCity/mooncake.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        case "P":
+        @: <img src="../Content/image/NewCity/大麦若叶.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+        default:
+        @: <img src="../Content/image/NewCity/100元.jpg" id="topImg" style="width: 100%; height: 100%;" />
+                break;
+    }
+
+    <div class="wrap">
+        <div class="ipt">
+            <div id="logo">
+                <img src="~/Content/image/ZTE/btnclick.png" />
+            </div>
+            @* <div id="clickzone">
+            </div>*@
+            <div id="stamp">
+                <img src="~/Content/image/common/stamp.png" />
+
+            </div>
+        </div>
+    </div>
+    @Html.Partial("tips/tips.modal")
+    @*    @Html.Partial("tips/tips.modal.receiving")*@
+    <script src="~/Scripts/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/Scripts/js/rem.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window['adaptive'].desinWidth = 720; // 设计图宽度
+        window['adaptive'].maxWidth = 540; // 页面最大宽度 默认540
+        window['adaptive'].init(); // 调用初始化方法
+        $('body').height($('body').get(0).clientHeight + 'px ');
+    </script>
+</body>
+</html>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var type = '@ViewData["Type"].ToString()';
+        var i = 0;
+        $("#logo").on("click", function () {
+            //$("#takeAwayBtn").css("background", "#95938c");
+            //$("#takeAwayBtn").off();
+            var type = '@ViewData["Type"].ToString()';
+            var openid = '@ViewData["Openid"].ToString()';
+            var awardDetailId = '@ViewData["AwardDetailId"].ToString()';
+            var awardName = '@ViewData["AwardName"].ToString()';
+            var activityId = '@ViewData["Activity"].ToString()';
+            $("#clickzone").hide();
+            $("#logo").show();
+            $("#stamp").show();
+            $('#tip').modal('show');
+            setTimeout("$('#tip').modal('hide')", 1000);
+
+            i = 1;
+            var url = window.location.protocol + "//" + window.location.host + "/wxredpackets/NewCity/ReceivedAward";
+            if (i == 1) {
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    data: {
+                        Openid: openid,
+                        AwardDetailId: awardDetailId,
+                        Type: type,
+                        AwardName: awardName,
+                        ActivityId: activityId
+                    },
+                    success: function (data) {
+                        if (data.success) {
+
+                        }
+                        else {
+
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    }
+                }).done(function () {
+                });
+            }
+        });
+
+        //$("#tipReceiving").modal("show");
+        //setTimeout("$('#tipReceiving').modal('hide')", 1500);
+    })
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+</script>
+

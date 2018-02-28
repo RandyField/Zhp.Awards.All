@@ -1,0 +1,11 @@
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\bin\Debug\ScreenStateSearch.EFModel.dll.config
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\bin\Debug\ScreenStateSearch.EFModel.dll
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\bin\Debug\ScreenStateSearch.EFModel.pdb
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\bin\Debug\EntityFramework.dll
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\bin\Debug\ScreenStateSearch.Model.dll
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\bin\Debug\ScreenStateSearch.Model.pdb
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\bin\Debug\EntityFramework.xml
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\obj\Debug\ScreenStateSearch.EFModel.csprojResolveAssemblyReference.cache
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\obj\Debug\ScreenStateSearch.EFModel.dll
+E:\GitHub\PersonalFramework\ScreenStateSearch.EFModel\obj\Debug\ScreenStateSearch.EFModel.pdb

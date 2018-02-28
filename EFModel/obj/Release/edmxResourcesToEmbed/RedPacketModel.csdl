@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZhpRedModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="TRF_WeChatUserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="openid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="nickname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="language" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="province" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="headimgurl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="privilege" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TRP_Activity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BeginTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="TimeLength" Type="Int32" />
+    <Property Name="Repertory" Type="Int32" />
+    <Property Name="Use" Type="Int32" />
+    <Property Name="TotalCount" Type="Int32" />
+    <Property Name="Expiration" Type="Int32" />
+    <Property Name="TimeSplit" Type="Int32" />
+    <Property Name="LastEndTime" Type="DateTime" Precision="3" />
+    <Property Name="Recycling" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TRP_ActivityAwardDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="ActivityId" Type="Int32" />
+    <Property Name="AwardDetailId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TRP_Award">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AwardTypeId" Type="Int32" />
+    <Property Name="Repertory" Type="Int32" />
+    <Property Name="Use" Type="Int32" />
+    <Property Name="TotalCount" Type="Int32" />
+    <Property Name="AwardCategoryId" Type="Int32" />
+    <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageFontSize" Type="Int32" />
+    <Property Name="Recycling" Type="Int32" />
+    <Property Name="ReceiveType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TRP_AwardCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TRP_AwardCategoryProportion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="ActivityId" Type="Int32" />
+    <Property Name="Proportion" Type="Int32" />
+    <Property Name="AwardCategoryId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TRP_AwardDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AwardTypeId" Type="Int32" />
+    <Property Name="AwardCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AwardId" Type="Int32" />
+    <Property Name="AwardCategoryId" Type="Int32" />
+    <Property Name="AwardUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AppearTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TRP_AwardReceive">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardTypeId" Type="Int32" />
+    <Property Name="AwardId" Type="Int32" />
+    <Property Name="AwardCategoryId" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityId" Type="Int32" />
+    <Property Name="SubmitTime" Type="DateTime" Precision="3" />
+    <Property Name="ReceiveTime" Type="DateTime" Precision="3" />
+    <Property Name="AwardDetailId" Type="Int32" />
+    <Property Name="OpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TRP_AwardType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TRP_AwardTypeProportion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="ActivityId" Type="Int32" />
+    <Property Name="Number" Type="Int32" />
+    <Property Name="AwardTypeId" Type="Int32" />
+    <Property Name="Mlecule" Type="Int32" />
+    <Property Name="Downstairs" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TRP_ClientLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="IPAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PageDesc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="PageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityId" Type="Int32" />
+    <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TRP_Award_bak">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AwardTypeId" Type="Int32" />
+    <Property Name="Repertory" Type="Int32" />
+    <Property Name="Use" Type="Int32" />
+    <Property Name="TotalCount" Type="Int32" />
+    <Property Name="AwardCategoryId" Type="Int32" />
+    <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageFontSize" Type="Int32" />
+    <Property Name="Recycling" Type="Int32" />
+    <Property Name="ReceiveType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TRP_ClientLog_bak">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="IPAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PageDesc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="PageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="View_Activity">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ActivityId" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="BeginTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="TimeLength" Type="Int32" />
+    <Property Name="Repertory" Type="Int32" />
+    <Property Name="Use" Type="Int32" />
+    <Property Name="TotalCount" Type="Int32" />
+    <Property Name="Expiration" Type="Int32" />
+    <Property Name="TimeSplit" Type="Int32" />
+    <Property Name="LastEndTime" Type="DateTime" Precision="3" />
+    <Property Name="delm" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="View_Award">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AwardTypeId" Type="Int32" />
+    <Property Name="Repertory" Type="Int32" />
+    <Property Name="Use" Type="Int32" />
+    <Property Name="TotalCount" Type="Int32" />
+    <Property Name="AwardCategoryId" Type="Int32" />
+    <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AwardCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ImageX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImageFontSize" Type="Int32" />
+    <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_AwardCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Expr1" Type="Boolean" />
+    <Property Name="Expr2" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="View_AwardDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AwardTypeId" Type="Int32" />
+    <Property Name="AwardCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AwardId" Type="Int32" />
+    <Property Name="AwardCategoryId" Type="Int32" />
+    <Property Name="AwardUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Expr1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Expr2" Type="Int32" />
+    <Property Name="Repertory" Type="Int32" />
+    <Property Name="Use" Type="Int32" />
+    <Property Name="TotalCount" Type="Int32" />
+    <Property Name="Expr3" Type="Int32" />
+  </EntityType>
+  <EntityType Name="View_AwardReceive">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardTypeId" Type="Int32" />
+    <Property Name="AwardId" Type="Int32" />
+    <Property Name="AwardCategoryId" Type="Int32" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityId" Type="Int32" />
+    <Property Name="SubmitTime" Type="DateTime" Precision="3" />
+    <Property Name="ReceiveTime" Type="DateTime" Precision="3" />
+    <Property Name="AwardDetailId" Type="Int32" />
+    <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AwardCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_AwardType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Expr1" Type="Boolean" />
+    <Property Name="Expr2" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="View_ClientLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeleteMark" Type="Boolean" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="IPAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PageDesc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="PageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityId" Type="Int32" />
+    <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_PreciousAward">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Enable" Type="Boolean" />
+    <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="AppearTime" Type="DateTime" Precision="3" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ZhpRedEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TRF_WeChatUserInfo" EntityType="Self.TRF_WeChatUserInfo" />
+    <EntitySet Name="TRP_Activity" EntityType="Self.TRP_Activity" />
+    <EntitySet Name="TRP_ActivityAwardDetail" EntityType="Self.TRP_ActivityAwardDetail" />
+    <EntitySet Name="TRP_Award" EntityType="Self.TRP_Award" />
+    <EntitySet Name="TRP_AwardCategory" EntityType="Self.TRP_AwardCategory" />
+    <EntitySet Name="TRP_AwardCategoryProportion" EntityType="Self.TRP_AwardCategoryProportion" />
+    <EntitySet Name="TRP_AwardDetail" EntityType="Self.TRP_AwardDetail" />
+    <EntitySet Name="TRP_AwardReceive" EntityType="Self.TRP_AwardReceive" />
+    <EntitySet Name="TRP_AwardType" EntityType="Self.TRP_AwardType" />
+    <EntitySet Name="TRP_AwardTypeProportion" EntityType="Self.TRP_AwardTypeProportion" />
+    <EntitySet Name="TRP_ClientLog" EntityType="Self.TRP_ClientLog" />
+    <EntitySet Name="TRP_Award_bak" EntityType="Self.TRP_Award_bak" />
+    <EntitySet Name="TRP_ClientLog_bak" EntityType="Self.TRP_ClientLog_bak" />
+    <EntitySet Name="View_Activity" EntityType="Self.View_Activity" />
+    <EntitySet Name="View_Award" EntityType="Self.View_Award" />
+    <EntitySet Name="View_AwardCategory" EntityType="Self.View_AwardCategory" />
+    <EntitySet Name="View_AwardDetail" EntityType="Self.View_AwardDetail" />
+    <EntitySet Name="View_AwardReceive" EntityType="Self.View_AwardReceive" />
+    <EntitySet Name="View_AwardType" EntityType="Self.View_AwardType" />
+    <EntitySet Name="View_ClientLog" EntityType="Self.View_ClientLog" />
+    <EntitySet Name="View_PreciousAward" EntityType="Self.View_PreciousAward" />
+    <EntitySet Name="TRP_OpenCount" EntityType="ZhpRedModel.TRP_OpenCount" />
+    <EntitySet Name="TRP_ScanCount" EntityType="ZhpRedModel.TRP_ScanCount" />
+    <EntitySet Name="TRP_QRCodeScanLimited" EntityType="ZhpRedModel.TRP_QRCodeScanLimited" />
+  </EntityContainer>
+  <EntityType Name="TRP_OpenCount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Count" Type="Int32" />
+    <Property Name="ActivityId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TRP_ScanCount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Count" Type="Int32" />
+    <Property Name="ActivityId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TRP_QRCodeScanLimited">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LimitedCount" Type="Int32" />
+    <Property Name="ActivityId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="QRRCode" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+</Schema>

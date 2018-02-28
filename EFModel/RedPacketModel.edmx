@@ -1,0 +1,1448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ZhpRedModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="TRF_WeChatUserInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="openid" Type="nvarchar" MaxLength="100" />
+          <Property Name="nickname" Type="nvarchar" MaxLength="50" />
+          <Property Name="sex" Type="nvarchar" MaxLength="2" />
+          <Property Name="language" Type="nvarchar" MaxLength="10" />
+          <Property Name="city" Type="nvarchar" MaxLength="32" />
+          <Property Name="province" Type="nvarchar" MaxLength="32" />
+          <Property Name="country" Type="nvarchar" MaxLength="32" />
+          <Property Name="headimgurl" Type="text" />
+          <Property Name="privilege" Type="text" />
+        </EntityType>
+        <EntityType Name="TRP_Activity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="ActivityName" Type="varchar" MaxLength="100" />
+          <Property Name="BeginTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="TimeLength" Type="int" />
+          <Property Name="Repertory" Type="int" />
+          <Property Name="Use" Type="int" />
+          <Property Name="TotalCount" Type="int" />
+          <Property Name="Expiration" Type="int" />
+          <Property Name="TimeSplit" Type="int" />
+          <Property Name="LastEndTime" Type="datetime" />
+          <Property Name="Recycling" Type="int" />
+        </EntityType>
+        <EntityType Name="TRP_ActivityAwardDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="ActivityId" Type="int" />
+          <Property Name="AwardDetailId" Type="int" />
+        </EntityType>
+        <EntityType Name="TRP_Award">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardName" Type="varchar" MaxLength="100" />
+          <Property Name="AwardTypeId" Type="int" />
+          <Property Name="Repertory" Type="int" />
+          <Property Name="Use" Type="int" />
+          <Property Name="TotalCount" Type="int" />
+          <Property Name="AwardCategoryId" Type="int" />
+          <Property Name="ReceiveImage" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImageX" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageY" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageFontSize" Type="int" />
+          <Property Name="Recycling" Type="int" />
+          <Property Name="ReceiveType" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.TRP_Award_bak”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TRP_Award_bak">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardName" Type="varchar" MaxLength="100" />
+          <Property Name="AwardTypeId" Type="int" />
+          <Property Name="Repertory" Type="int" />
+          <Property Name="Use" Type="int" />
+          <Property Name="TotalCount" Type="int" />
+          <Property Name="AwardCategoryId" Type="int" />
+          <Property Name="ReceiveImage" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImageX" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageY" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageFontSize" Type="int" />
+          <Property Name="Recycling" Type="int" />
+          <Property Name="ReceiveType" Type="int" />
+        </EntityType>
+        <EntityType Name="TRP_AwardCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardCategoryName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TRP_AwardCategoryProportion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="ActivityId" Type="int" />
+          <Property Name="Proportion" Type="int" />
+          <Property Name="AwardCategoryId" Type="int" />
+        </EntityType>
+        <EntityType Name="TRP_AwardDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardName" Type="varchar" MaxLength="100" />
+          <Property Name="AwardTypeId" Type="int" />
+          <Property Name="AwardCode" Type="varchar" MaxLength="200" />
+          <Property Name="AwardId" Type="int" />
+          <Property Name="AwardCategoryId" Type="int" />
+          <Property Name="AwardUrl" Type="varchar" MaxLength="200" />
+          <Property Name="AppearTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TRP_AwardReceive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardTypeId" Type="int" />
+          <Property Name="AwardId" Type="int" />
+          <Property Name="AwardCategoryId" Type="int" />
+          <Property Name="Phone" Type="varchar" MaxLength="11" />
+          <Property Name="ActivityId" Type="int" />
+          <Property Name="SubmitTime" Type="datetime" />
+          <Property Name="ReceiveTime" Type="datetime" />
+          <Property Name="AwardDetailId" Type="int" />
+          <Property Name="OpenId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TRP_AwardType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardTypeName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TRP_AwardTypeProportion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="ActivityId" Type="int" />
+          <Property Name="Number" Type="int" />
+          <Property Name="AwardTypeId" Type="int" />
+          <Property Name="Mlecule" Type="int" />
+          <Property Name="Downstairs" Type="int" />
+        </EntityType>
+        <EntityType Name="TRP_ClientLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="200" />
+          <Property Name="PageDesc" Type="varchar" MaxLength="2000" />
+          <Property Name="PageUrl" Type="varchar" MaxLength="2000" />
+          <Property Name="ActivityId" Type="int" />
+          <Property Name="ReceiveImage" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.TRP_ClientLog_bak”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="TRP_ClientLog_bak">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="200" />
+          <Property Name="PageDesc" Type="varchar" MaxLength="2000" />
+          <Property Name="PageUrl" Type="varchar" MaxLength="2000" />
+          <Property Name="ActivityId" Type="int" />
+        </EntityType>
+        <EntityType Name="TRP_OpenCount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Count" Type="int" />
+          <Property Name="ActivityId" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TRP_QRCodeScanLimited">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LimitedCount" Type="int" />
+          <Property Name="ActivityId" Type="nvarchar" MaxLength="10" />
+          <Property Name="QRRCode" Type="nvarchar" MaxLength="512" />
+          <Property Name="ActivityName" Type="nvarchar" MaxLength="512" />
+          <Property Name="UpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TRP_ScanCount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Count" Type="int" />
+          <Property Name="ActivityId" Type="nvarchar" MaxLength="10" />
+          <Property Name="ActivityName" Type="nvarchar" MaxLength="512" />
+          <Property Name="Url" Type="nvarchar" MaxLength="512" />
+          <Property Name="UpdateTime" Type="datetime" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.View_Activity”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_Activity">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="ActivityId" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ActivityId" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="ActivityName" Type="varchar" MaxLength="100" />
+          <Property Name="BeginTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="TimeLength" Type="int" />
+          <Property Name="Repertory" Type="int" />
+          <Property Name="Use" Type="int" />
+          <Property Name="TotalCount" Type="int" />
+          <Property Name="Expiration" Type="int" />
+          <Property Name="TimeSplit" Type="int" />
+          <Property Name="LastEndTime" Type="datetime" />
+          <Property Name="delm" Type="bit" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.View_Award”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_Award">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="ActivityId" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardName" Type="varchar" MaxLength="100" />
+          <Property Name="AwardTypeId" Type="int" />
+          <Property Name="Repertory" Type="int" />
+          <Property Name="Use" Type="int" />
+          <Property Name="TotalCount" Type="int" />
+          <Property Name="AwardCategoryId" Type="int" />
+          <Property Name="AwardTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="AwardCategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="ReceiveImage" Type="nvarchar" MaxLength="500" />
+          <Property Name="ImageX" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageY" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImageFontSize" Type="int" />
+          <Property Name="ActivityName" Type="varchar" MaxLength="100" />
+          <Property Name="ActivityId" Type="int" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.View_AwardCategory”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_AwardCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardCategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="Expr1" Type="bit" />
+          <Property Name="Expr2" Type="bit" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.View_AwardDetail”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_AwardDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardName" Type="varchar" MaxLength="100" />
+          <Property Name="AwardTypeId" Type="int" />
+          <Property Name="AwardCode" Type="varchar" MaxLength="200" />
+          <Property Name="AwardId" Type="int" />
+          <Property Name="AwardCategoryId" Type="int" />
+          <Property Name="AwardUrl" Type="varchar" MaxLength="200" />
+          <Property Name="Expr1" Type="varchar" MaxLength="100" />
+          <Property Name="Expr2" Type="int" />
+          <Property Name="Repertory" Type="int" />
+          <Property Name="Use" Type="int" />
+          <Property Name="TotalCount" Type="int" />
+          <Property Name="Expr3" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.View_AwardReceive”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_AwardReceive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardTypeId" Type="int" />
+          <Property Name="AwardId" Type="int" />
+          <Property Name="AwardCategoryId" Type="int" />
+          <Property Name="Phone" Type="varchar" MaxLength="11" />
+          <Property Name="ActivityId" Type="int" />
+          <Property Name="SubmitTime" Type="datetime" />
+          <Property Name="ReceiveTime" Type="datetime" />
+          <Property Name="AwardDetailId" Type="int" />
+          <Property Name="OpenId" Type="varchar" MaxLength="50" />
+          <Property Name="AwardName" Type="varchar" MaxLength="100" />
+          <Property Name="AwardTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="AwardCategoryName" Type="varchar" MaxLength="50" />
+          <Property Name="ActivityName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.View_AwardType”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_AwardType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="AwardTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="Expr1" Type="bit" />
+          <Property Name="Expr2" Type="bit" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.View_ClientLog”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_ClientLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="DeleteMark" Type="bit" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="IPAddress" Type="varchar" MaxLength="200" />
+          <Property Name="PageDesc" Type="varchar" MaxLength="2000" />
+          <Property Name="PageUrl" Type="varchar" MaxLength="2000" />
+          <Property Name="ActivityId" Type="int" />
+          <Property Name="ReceiveImage" Type="varchar" MaxLength="500" />
+          <Property Name="ActivityName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“ZhpRed.dbo.View_PreciousAward”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="View_PreciousAward">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="AwardName" Type="varchar" MaxLength="100" />
+          <Property Name="AwardTypeName" Type="varchar" MaxLength="50" />
+          <Property Name="Enable" Type="bit" />
+          <Property Name="ActivityName" Type="varchar" MaxLength="100" />
+          <Property Name="CreateTime" Type="datetime" />
+          <Property Name="AppearTime" Type="datetime" />
+          <Property Name="Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ZhpRedModelStoreContainer">
+          <EntitySet Name="TRF_WeChatUserInfo" EntityType="Self.TRF_WeChatUserInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_Activity" EntityType="Self.TRP_Activity" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_ActivityAwardDetail" EntityType="Self.TRP_ActivityAwardDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_Award" EntityType="Self.TRP_Award" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_AwardCategory" EntityType="Self.TRP_AwardCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_AwardCategoryProportion" EntityType="Self.TRP_AwardCategoryProportion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_AwardDetail" EntityType="Self.TRP_AwardDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_AwardReceive" EntityType="Self.TRP_AwardReceive" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_AwardType" EntityType="Self.TRP_AwardType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_AwardTypeProportion" EntityType="Self.TRP_AwardTypeProportion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_ClientLog" EntityType="Self.TRP_ClientLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_OpenCount" EntityType="Self.TRP_OpenCount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_QRCodeScanLimited" EntityType="Self.TRP_QRCodeScanLimited" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_ScanCount" EntityType="Self.TRP_ScanCount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TRP_Award_bak" EntityType="Self.TRP_Award_bak" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TRP_Award_bak].[Id] AS [Id], 
+[TRP_Award_bak].[CreateTime] AS [CreateTime], 
+[TRP_Award_bak].[Description] AS [Description], 
+[TRP_Award_bak].[DeleteMark] AS [DeleteMark], 
+[TRP_Award_bak].[Enable] AS [Enable], 
+[TRP_Award_bak].[AwardName] AS [AwardName], 
+[TRP_Award_bak].[AwardTypeId] AS [AwardTypeId], 
+[TRP_Award_bak].[Repertory] AS [Repertory], 
+[TRP_Award_bak].[Use] AS [Use], 
+[TRP_Award_bak].[TotalCount] AS [TotalCount], 
+[TRP_Award_bak].[AwardCategoryId] AS [AwardCategoryId], 
+[TRP_Award_bak].[ReceiveImage] AS [ReceiveImage], 
+[TRP_Award_bak].[ImageX] AS [ImageX], 
+[TRP_Award_bak].[ImageY] AS [ImageY], 
+[TRP_Award_bak].[ImageFontSize] AS [ImageFontSize], 
+[TRP_Award_bak].[Recycling] AS [Recycling], 
+[TRP_Award_bak].[ReceiveType] AS [ReceiveType]
+FROM [dbo].[TRP_Award_bak] AS [TRP_Award_bak]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TRP_ClientLog_bak" EntityType="Self.TRP_ClientLog_bak" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[TRP_ClientLog_bak].[Id] AS [Id], 
+[TRP_ClientLog_bak].[CreateTime] AS [CreateTime], 
+[TRP_ClientLog_bak].[Description] AS [Description], 
+[TRP_ClientLog_bak].[DeleteMark] AS [DeleteMark], 
+[TRP_ClientLog_bak].[Enable] AS [Enable], 
+[TRP_ClientLog_bak].[IPAddress] AS [IPAddress], 
+[TRP_ClientLog_bak].[PageDesc] AS [PageDesc], 
+[TRP_ClientLog_bak].[PageUrl] AS [PageUrl], 
+[TRP_ClientLog_bak].[ActivityId] AS [ActivityId]
+FROM [dbo].[TRP_ClientLog_bak] AS [TRP_ClientLog_bak]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_Activity" EntityType="Self.View_Activity" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_Activity].[Id] AS [Id], 
+[View_Activity].[ActivityId] AS [ActivityId], 
+[View_Activity].[CreateTime] AS [CreateTime], 
+[View_Activity].[Description] AS [Description], 
+[View_Activity].[DeleteMark] AS [DeleteMark], 
+[View_Activity].[Enable] AS [Enable], 
+[View_Activity].[ActivityName] AS [ActivityName], 
+[View_Activity].[BeginTime] AS [BeginTime], 
+[View_Activity].[EndTime] AS [EndTime], 
+[View_Activity].[TimeLength] AS [TimeLength], 
+[View_Activity].[Repertory] AS [Repertory], 
+[View_Activity].[Use] AS [Use], 
+[View_Activity].[TotalCount] AS [TotalCount], 
+[View_Activity].[Expiration] AS [Expiration], 
+[View_Activity].[TimeSplit] AS [TimeSplit], 
+[View_Activity].[LastEndTime] AS [LastEndTime], 
+[View_Activity].[delm] AS [delm]
+FROM [dbo].[View_Activity] AS [View_Activity]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_Award" EntityType="Self.View_Award" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_Award].[Id] AS [Id], 
+[View_Award].[CreateTime] AS [CreateTime], 
+[View_Award].[Description] AS [Description], 
+[View_Award].[DeleteMark] AS [DeleteMark], 
+[View_Award].[Enable] AS [Enable], 
+[View_Award].[AwardName] AS [AwardName], 
+[View_Award].[AwardTypeId] AS [AwardTypeId], 
+[View_Award].[Repertory] AS [Repertory], 
+[View_Award].[Use] AS [Use], 
+[View_Award].[TotalCount] AS [TotalCount], 
+[View_Award].[AwardCategoryId] AS [AwardCategoryId], 
+[View_Award].[AwardTypeName] AS [AwardTypeName], 
+[View_Award].[AwardCategoryName] AS [AwardCategoryName], 
+[View_Award].[ReceiveImage] AS [ReceiveImage], 
+[View_Award].[ImageX] AS [ImageX], 
+[View_Award].[ImageY] AS [ImageY], 
+[View_Award].[ImageFontSize] AS [ImageFontSize], 
+[View_Award].[ActivityName] AS [ActivityName], 
+[View_Award].[ActivityId] AS [ActivityId]
+FROM [dbo].[View_Award] AS [View_Award]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_AwardCategory" EntityType="Self.View_AwardCategory" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_AwardCategory].[Id] AS [Id], 
+[View_AwardCategory].[CreateTime] AS [CreateTime], 
+[View_AwardCategory].[Description] AS [Description], 
+[View_AwardCategory].[DeleteMark] AS [DeleteMark], 
+[View_AwardCategory].[Enable] AS [Enable], 
+[View_AwardCategory].[AwardCategoryName] AS [AwardCategoryName], 
+[View_AwardCategory].[Expr1] AS [Expr1], 
+[View_AwardCategory].[Expr2] AS [Expr2]
+FROM [dbo].[View_AwardCategory] AS [View_AwardCategory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_AwardDetail" EntityType="Self.View_AwardDetail" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_AwardDetail].[Id] AS [Id], 
+[View_AwardDetail].[CreateTime] AS [CreateTime], 
+[View_AwardDetail].[Description] AS [Description], 
+[View_AwardDetail].[DeleteMark] AS [DeleteMark], 
+[View_AwardDetail].[Enable] AS [Enable], 
+[View_AwardDetail].[AwardName] AS [AwardName], 
+[View_AwardDetail].[AwardTypeId] AS [AwardTypeId], 
+[View_AwardDetail].[AwardCode] AS [AwardCode], 
+[View_AwardDetail].[AwardId] AS [AwardId], 
+[View_AwardDetail].[AwardCategoryId] AS [AwardCategoryId], 
+[View_AwardDetail].[AwardUrl] AS [AwardUrl], 
+[View_AwardDetail].[Expr1] AS [Expr1], 
+[View_AwardDetail].[Expr2] AS [Expr2], 
+[View_AwardDetail].[Repertory] AS [Repertory], 
+[View_AwardDetail].[Use] AS [Use], 
+[View_AwardDetail].[TotalCount] AS [TotalCount], 
+[View_AwardDetail].[Expr3] AS [Expr3]
+FROM [dbo].[View_AwardDetail] AS [View_AwardDetail]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_AwardReceive" EntityType="Self.View_AwardReceive" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_AwardReceive].[Id] AS [Id], 
+[View_AwardReceive].[CreateTime] AS [CreateTime], 
+[View_AwardReceive].[Description] AS [Description], 
+[View_AwardReceive].[DeleteMark] AS [DeleteMark], 
+[View_AwardReceive].[Enable] AS [Enable], 
+[View_AwardReceive].[AwardTypeId] AS [AwardTypeId], 
+[View_AwardReceive].[AwardId] AS [AwardId], 
+[View_AwardReceive].[AwardCategoryId] AS [AwardCategoryId], 
+[View_AwardReceive].[Phone] AS [Phone], 
+[View_AwardReceive].[ActivityId] AS [ActivityId], 
+[View_AwardReceive].[SubmitTime] AS [SubmitTime], 
+[View_AwardReceive].[ReceiveTime] AS [ReceiveTime], 
+[View_AwardReceive].[AwardDetailId] AS [AwardDetailId], 
+[View_AwardReceive].[OpenId] AS [OpenId], 
+[View_AwardReceive].[AwardName] AS [AwardName], 
+[View_AwardReceive].[AwardTypeName] AS [AwardTypeName], 
+[View_AwardReceive].[AwardCategoryName] AS [AwardCategoryName], 
+[View_AwardReceive].[ActivityName] AS [ActivityName]
+FROM [dbo].[View_AwardReceive] AS [View_AwardReceive]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_AwardType" EntityType="Self.View_AwardType" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_AwardType].[Id] AS [Id], 
+[View_AwardType].[CreateTime] AS [CreateTime], 
+[View_AwardType].[Description] AS [Description], 
+[View_AwardType].[DeleteMark] AS [DeleteMark], 
+[View_AwardType].[Enable] AS [Enable], 
+[View_AwardType].[AwardTypeName] AS [AwardTypeName], 
+[View_AwardType].[Expr1] AS [Expr1], 
+[View_AwardType].[Expr2] AS [Expr2]
+FROM [dbo].[View_AwardType] AS [View_AwardType]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_ClientLog" EntityType="Self.View_ClientLog" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_ClientLog].[Id] AS [Id], 
+[View_ClientLog].[CreateTime] AS [CreateTime], 
+[View_ClientLog].[Description] AS [Description], 
+[View_ClientLog].[DeleteMark] AS [DeleteMark], 
+[View_ClientLog].[Enable] AS [Enable], 
+[View_ClientLog].[IPAddress] AS [IPAddress], 
+[View_ClientLog].[PageDesc] AS [PageDesc], 
+[View_ClientLog].[PageUrl] AS [PageUrl], 
+[View_ClientLog].[ActivityId] AS [ActivityId], 
+[View_ClientLog].[ReceiveImage] AS [ReceiveImage], 
+[View_ClientLog].[ActivityName] AS [ActivityName]
+FROM [dbo].[View_ClientLog] AS [View_ClientLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_PreciousAward" EntityType="Self.View_PreciousAward" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[View_PreciousAward].[AwardName] AS [AwardName], 
+[View_PreciousAward].[AwardTypeName] AS [AwardTypeName], 
+[View_PreciousAward].[Enable] AS [Enable], 
+[View_PreciousAward].[ActivityName] AS [ActivityName], 
+[View_PreciousAward].[CreateTime] AS [CreateTime], 
+[View_PreciousAward].[AppearTime] AS [AppearTime], 
+[View_PreciousAward].[Id] AS [Id]
+FROM [dbo].[View_PreciousAward] AS [View_PreciousAward]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZhpRedModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="TRF_WeChatUserInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="openid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="nickname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sex" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="language" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="province" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="headimgurl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="privilege" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TRP_Activity">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BeginTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="TimeLength" Type="Int32" />
+          <Property Name="Repertory" Type="Int32" />
+          <Property Name="Use" Type="Int32" />
+          <Property Name="TotalCount" Type="Int32" />
+          <Property Name="Expiration" Type="Int32" />
+          <Property Name="TimeSplit" Type="Int32" />
+          <Property Name="LastEndTime" Type="DateTime" Precision="3" />
+          <Property Name="Recycling" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TRP_ActivityAwardDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="ActivityId" Type="Int32" />
+          <Property Name="AwardDetailId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TRP_Award">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AwardTypeId" Type="Int32" />
+          <Property Name="Repertory" Type="Int32" />
+          <Property Name="Use" Type="Int32" />
+          <Property Name="TotalCount" Type="Int32" />
+          <Property Name="AwardCategoryId" Type="Int32" />
+          <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImageX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageFontSize" Type="Int32" />
+          <Property Name="Recycling" Type="Int32" />
+          <Property Name="ReceiveType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TRP_AwardCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TRP_AwardCategoryProportion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="ActivityId" Type="Int32" />
+          <Property Name="Proportion" Type="Int32" />
+          <Property Name="AwardCategoryId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TRP_AwardDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AwardTypeId" Type="Int32" />
+          <Property Name="AwardCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="AwardId" Type="Int32" />
+          <Property Name="AwardCategoryId" Type="Int32" />
+          <Property Name="AwardUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="AppearTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TRP_AwardReceive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardTypeId" Type="Int32" />
+          <Property Name="AwardId" Type="Int32" />
+          <Property Name="AwardCategoryId" Type="Int32" />
+          <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="ActivityId" Type="Int32" />
+          <Property Name="SubmitTime" Type="DateTime" Precision="3" />
+          <Property Name="ReceiveTime" Type="DateTime" Precision="3" />
+          <Property Name="AwardDetailId" Type="Int32" />
+          <Property Name="OpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TRP_AwardType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TRP_AwardTypeProportion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="ActivityId" Type="Int32" />
+          <Property Name="Number" Type="Int32" />
+          <Property Name="AwardTypeId" Type="Int32" />
+          <Property Name="Mlecule" Type="Int32" />
+          <Property Name="Downstairs" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TRP_ClientLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="IPAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PageDesc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="PageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="ActivityId" Type="Int32" />
+          <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TRP_Award_bak">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AwardTypeId" Type="Int32" />
+          <Property Name="Repertory" Type="Int32" />
+          <Property Name="Use" Type="Int32" />
+          <Property Name="TotalCount" Type="Int32" />
+          <Property Name="AwardCategoryId" Type="Int32" />
+          <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImageX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageFontSize" Type="Int32" />
+          <Property Name="Recycling" Type="Int32" />
+          <Property Name="ReceiveType" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TRP_ClientLog_bak">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="IPAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PageDesc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="PageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="ActivityId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="View_Activity">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="ActivityId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ActivityId" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="BeginTime" Type="DateTime" Precision="3" />
+          <Property Name="EndTime" Type="DateTime" Precision="3" />
+          <Property Name="TimeLength" Type="Int32" />
+          <Property Name="Repertory" Type="Int32" />
+          <Property Name="Use" Type="Int32" />
+          <Property Name="TotalCount" Type="Int32" />
+          <Property Name="Expiration" Type="Int32" />
+          <Property Name="TimeSplit" Type="Int32" />
+          <Property Name="LastEndTime" Type="DateTime" Precision="3" />
+          <Property Name="delm" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="View_Award">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="ActivityId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AwardTypeId" Type="Int32" />
+          <Property Name="Repertory" Type="Int32" />
+          <Property Name="Use" Type="Int32" />
+          <Property Name="TotalCount" Type="Int32" />
+          <Property Name="AwardCategoryId" Type="Int32" />
+          <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AwardCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ImageX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImageFontSize" Type="Int32" />
+          <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ActivityId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="View_AwardCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr1" Type="Boolean" />
+          <Property Name="Expr2" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="View_AwardDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AwardTypeId" Type="Int32" />
+          <Property Name="AwardCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="AwardId" Type="Int32" />
+          <Property Name="AwardCategoryId" Type="Int32" />
+          <Property Name="AwardUrl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Expr1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Expr2" Type="Int32" />
+          <Property Name="Repertory" Type="Int32" />
+          <Property Name="Use" Type="Int32" />
+          <Property Name="TotalCount" Type="Int32" />
+          <Property Name="Expr3" Type="Int32" />
+        </EntityType>
+        <EntityType Name="View_AwardReceive">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardTypeId" Type="Int32" />
+          <Property Name="AwardId" Type="Int32" />
+          <Property Name="AwardCategoryId" Type="Int32" />
+          <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="ActivityId" Type="Int32" />
+          <Property Name="SubmitTime" Type="DateTime" Precision="3" />
+          <Property Name="ReceiveTime" Type="DateTime" Precision="3" />
+          <Property Name="AwardDetailId" Type="Int32" />
+          <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AwardCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="View_AwardType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Expr1" Type="Boolean" />
+          <Property Name="Expr2" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="View_ClientLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteMark" Type="Boolean" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="IPAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="PageDesc" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="PageUrl" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="ActivityId" Type="Int32" />
+          <Property Name="ReceiveImage" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="View_PreciousAward">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="AwardName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AwardTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Enable" Type="Boolean" />
+          <Property Name="ActivityName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="AppearTime" Type="DateTime" Precision="3" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ZhpRedEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TRF_WeChatUserInfo" EntityType="Self.TRF_WeChatUserInfo" />
+          <EntitySet Name="TRP_Activity" EntityType="Self.TRP_Activity" />
+          <EntitySet Name="TRP_ActivityAwardDetail" EntityType="Self.TRP_ActivityAwardDetail" />
+          <EntitySet Name="TRP_Award" EntityType="Self.TRP_Award" />
+          <EntitySet Name="TRP_AwardCategory" EntityType="Self.TRP_AwardCategory" />
+          <EntitySet Name="TRP_AwardCategoryProportion" EntityType="Self.TRP_AwardCategoryProportion" />
+          <EntitySet Name="TRP_AwardDetail" EntityType="Self.TRP_AwardDetail" />
+          <EntitySet Name="TRP_AwardReceive" EntityType="Self.TRP_AwardReceive" />
+          <EntitySet Name="TRP_AwardType" EntityType="Self.TRP_AwardType" />
+          <EntitySet Name="TRP_AwardTypeProportion" EntityType="Self.TRP_AwardTypeProportion" />
+          <EntitySet Name="TRP_ClientLog" EntityType="Self.TRP_ClientLog" />
+          <EntitySet Name="TRP_Award_bak" EntityType="Self.TRP_Award_bak" />
+          <EntitySet Name="TRP_ClientLog_bak" EntityType="Self.TRP_ClientLog_bak" />
+          <EntitySet Name="View_Activity" EntityType="Self.View_Activity" />
+          <EntitySet Name="View_Award" EntityType="Self.View_Award" />
+          <EntitySet Name="View_AwardCategory" EntityType="Self.View_AwardCategory" />
+          <EntitySet Name="View_AwardDetail" EntityType="Self.View_AwardDetail" />
+          <EntitySet Name="View_AwardReceive" EntityType="Self.View_AwardReceive" />
+          <EntitySet Name="View_AwardType" EntityType="Self.View_AwardType" />
+          <EntitySet Name="View_ClientLog" EntityType="Self.View_ClientLog" />
+          <EntitySet Name="View_PreciousAward" EntityType="Self.View_PreciousAward" />
+          <EntitySet Name="TRP_OpenCount" EntityType="ZhpRedModel.TRP_OpenCount" />
+          <EntitySet Name="TRP_ScanCount" EntityType="ZhpRedModel.TRP_ScanCount" />
+          <EntitySet Name="TRP_QRCodeScanLimited" EntityType="ZhpRedModel.TRP_QRCodeScanLimited" />
+        </EntityContainer>
+        <EntityType Name="TRP_OpenCount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Count" Type="Int32" />
+          <Property Name="ActivityId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TRP_ScanCount">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Count" Type="Int32" />
+          <Property Name="ActivityId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ActivityName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TRP_QRCodeScanLimited">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LimitedCount" Type="Int32" />
+          <Property Name="ActivityId" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="QRRCode" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="ActivityName" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZhpRedModelStoreContainer" CdmEntityContainer="ZhpRedEntities">
+          <EntitySetMapping Name="TRF_WeChatUserInfo">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRF_WeChatUserInfo">
+              <MappingFragment StoreEntitySet="TRF_WeChatUserInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="openid" ColumnName="openid" />
+                <ScalarProperty Name="nickname" ColumnName="nickname" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="language" ColumnName="language" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="province" ColumnName="province" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="headimgurl" ColumnName="headimgurl" />
+                <ScalarProperty Name="privilege" ColumnName="privilege" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_Activity">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_Activity">
+              <MappingFragment StoreEntitySet="TRP_Activity">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="TimeLength" ColumnName="TimeLength" />
+                <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+                <ScalarProperty Name="Use" ColumnName="Use" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="Expiration" ColumnName="Expiration" />
+                <ScalarProperty Name="TimeSplit" ColumnName="TimeSplit" />
+                <ScalarProperty Name="LastEndTime" ColumnName="LastEndTime" />
+                <ScalarProperty Name="Recycling" ColumnName="Recycling" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_ActivityAwardDetail">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_ActivityAwardDetail">
+              <MappingFragment StoreEntitySet="TRP_ActivityAwardDetail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="AwardDetailId" ColumnName="AwardDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_Award">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_Award">
+              <MappingFragment StoreEntitySet="TRP_Award">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+                <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+                <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+                <ScalarProperty Name="Use" ColumnName="Use" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+                <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+                <ScalarProperty Name="ImageX" ColumnName="ImageX" />
+                <ScalarProperty Name="ImageY" ColumnName="ImageY" />
+                <ScalarProperty Name="ImageFontSize" ColumnName="ImageFontSize" />
+                <ScalarProperty Name="Recycling" ColumnName="Recycling" />
+                <ScalarProperty Name="ReceiveType" ColumnName="ReceiveType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_AwardCategory">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardCategory">
+              <MappingFragment StoreEntitySet="TRP_AwardCategory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardCategoryName" ColumnName="AwardCategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_AwardCategoryProportion">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardCategoryProportion">
+              <MappingFragment StoreEntitySet="TRP_AwardCategoryProportion">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="Proportion" ColumnName="Proportion" />
+                <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_AwardDetail">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardDetail">
+              <MappingFragment StoreEntitySet="TRP_AwardDetail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+                <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+                <ScalarProperty Name="AwardCode" ColumnName="AwardCode" />
+                <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+                <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+                <ScalarProperty Name="AwardUrl" ColumnName="AwardUrl" />
+                <ScalarProperty Name="AppearTime" ColumnName="AppearTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_AwardReceive">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardReceive">
+              <MappingFragment StoreEntitySet="TRP_AwardReceive">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+                <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+                <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="SubmitTime" ColumnName="SubmitTime" />
+                <ScalarProperty Name="ReceiveTime" ColumnName="ReceiveTime" />
+                <ScalarProperty Name="AwardDetailId" ColumnName="AwardDetailId" />
+                <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_AwardType">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardType">
+              <MappingFragment StoreEntitySet="TRP_AwardType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_AwardTypeProportion">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_AwardTypeProportion">
+              <MappingFragment StoreEntitySet="TRP_AwardTypeProportion">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+                <ScalarProperty Name="Mlecule" ColumnName="Mlecule" />
+                <ScalarProperty Name="Downstairs" ColumnName="Downstairs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_ClientLog">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_ClientLog">
+              <MappingFragment StoreEntitySet="TRP_ClientLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="PageDesc" ColumnName="PageDesc" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_Award_bak">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_Award_bak">
+              <MappingFragment StoreEntitySet="TRP_Award_bak">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+                <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+                <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+                <ScalarProperty Name="Use" ColumnName="Use" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+                <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+                <ScalarProperty Name="ImageX" ColumnName="ImageX" />
+                <ScalarProperty Name="ImageY" ColumnName="ImageY" />
+                <ScalarProperty Name="ImageFontSize" ColumnName="ImageFontSize" />
+                <ScalarProperty Name="Recycling" ColumnName="Recycling" />
+                <ScalarProperty Name="ReceiveType" ColumnName="ReceiveType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_ClientLog_bak">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_ClientLog_bak">
+              <MappingFragment StoreEntitySet="TRP_ClientLog_bak">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="PageDesc" ColumnName="PageDesc" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_Activity">
+            <EntityTypeMapping TypeName="ZhpRedModel.View_Activity">
+              <MappingFragment StoreEntitySet="View_Activity">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="BeginTime" ColumnName="BeginTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="TimeLength" ColumnName="TimeLength" />
+                <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+                <ScalarProperty Name="Use" ColumnName="Use" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="Expiration" ColumnName="Expiration" />
+                <ScalarProperty Name="TimeSplit" ColumnName="TimeSplit" />
+                <ScalarProperty Name="LastEndTime" ColumnName="LastEndTime" />
+                <ScalarProperty Name="delm" ColumnName="delm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_Award">
+            <EntityTypeMapping TypeName="ZhpRedModel.View_Award">
+              <MappingFragment StoreEntitySet="View_Award">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+                <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+                <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+                <ScalarProperty Name="Use" ColumnName="Use" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+                <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+                <ScalarProperty Name="AwardCategoryName" ColumnName="AwardCategoryName" />
+                <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+                <ScalarProperty Name="ImageX" ColumnName="ImageX" />
+                <ScalarProperty Name="ImageY" ColumnName="ImageY" />
+                <ScalarProperty Name="ImageFontSize" ColumnName="ImageFontSize" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_AwardCategory">
+            <EntityTypeMapping TypeName="ZhpRedModel.View_AwardCategory">
+              <MappingFragment StoreEntitySet="View_AwardCategory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardCategoryName" ColumnName="AwardCategoryName" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_AwardDetail">
+            <EntityTypeMapping TypeName="ZhpRedModel.View_AwardDetail">
+              <MappingFragment StoreEntitySet="View_AwardDetail">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+                <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+                <ScalarProperty Name="AwardCode" ColumnName="AwardCode" />
+                <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+                <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+                <ScalarProperty Name="AwardUrl" ColumnName="AwardUrl" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+                <ScalarProperty Name="Repertory" ColumnName="Repertory" />
+                <ScalarProperty Name="Use" ColumnName="Use" />
+                <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+                <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_AwardReceive">
+            <EntityTypeMapping TypeName="ZhpRedModel.View_AwardReceive">
+              <MappingFragment StoreEntitySet="View_AwardReceive">
+                <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardTypeId" ColumnName="AwardTypeId" />
+                <ScalarProperty Name="AwardId" ColumnName="AwardId" />
+                <ScalarProperty Name="AwardCategoryId" ColumnName="AwardCategoryId" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="SubmitTime" ColumnName="SubmitTime" />
+                <ScalarProperty Name="ReceiveTime" ColumnName="ReceiveTime" />
+                <ScalarProperty Name="AwardDetailId" ColumnName="AwardDetailId" />
+                <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+                <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+                <ScalarProperty Name="AwardCategoryName" ColumnName="AwardCategoryName" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_AwardType">
+            <EntityTypeMapping TypeName="ZhpRedModel.View_AwardType">
+              <MappingFragment StoreEntitySet="View_AwardType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+                <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_ClientLog">
+            <EntityTypeMapping TypeName="ZhpRedModel.View_ClientLog">
+              <MappingFragment StoreEntitySet="View_ClientLog">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DeleteMark" ColumnName="DeleteMark" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="PageDesc" ColumnName="PageDesc" />
+                <ScalarProperty Name="PageUrl" ColumnName="PageUrl" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="ReceiveImage" ColumnName="ReceiveImage" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_PreciousAward">
+            <EntityTypeMapping TypeName="ZhpRedModel.View_PreciousAward">
+              <MappingFragment StoreEntitySet="View_PreciousAward">
+                <ScalarProperty Name="AwardName" ColumnName="AwardName" />
+                <ScalarProperty Name="AwardTypeName" ColumnName="AwardTypeName" />
+                <ScalarProperty Name="Enable" ColumnName="Enable" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="AppearTime" ColumnName="AppearTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_OpenCount">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_OpenCount">
+              <MappingFragment StoreEntitySet="TRP_OpenCount">
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_ScanCount">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_ScanCount">
+              <MappingFragment StoreEntitySet="TRP_ScanCount">
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="Count" ColumnName="Count" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TRP_QRCodeScanLimited">
+            <EntityTypeMapping TypeName="ZhpRedModel.TRP_QRCodeScanLimited">
+              <MappingFragment StoreEntitySet="TRP_QRCodeScanLimited">
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="QRRCode" ColumnName="QRRCode" />
+                <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+                <ScalarProperty Name="LimitedCount" ColumnName="LimitedCount" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

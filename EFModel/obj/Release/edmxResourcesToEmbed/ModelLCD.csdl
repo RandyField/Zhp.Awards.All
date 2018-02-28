@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="serverModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="ActivityVote_SMS">
+    <Key>
+      <PropertyRef Name="ActivityVoteID" />
+    </Key>
+    <Property Name="ActivityVoteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VoteID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VoteRank" Type="Int32" />
+    <Property Name="SMS1EndType" Type="Int32" />
+    <Property Name="SMS1SendTime" Type="DateTime" Precision="3" />
+    <Property Name="SMS1EndTime" Type="DateTime" Precision="3" />
+    <Property Name="SMS2EndType" Type="Int32" />
+    <Property Name="SMS2ReceiveTime" Type="DateTime" Precision="3" />
+    <Property Name="SMS2SendTime" Type="DateTime" Precision="3" />
+    <Property Name="SMS2EndTime" Type="DateTime" Precision="3" />
+    <Property Name="Information" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="InfoMark" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="updatetime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TD_COMMAND_STATE">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="commandnum" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="execstate" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="execdes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="exectime" Type="DateTime" Precision="3" />
+    <Property Name="uploadtime" Type="DateTime" Precision="3" />
+    <Property Name="storetime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TH_HARDWARE_STATE">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="errornum" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="producetime" Type="DateTime" Precision="3" />
+    <Property Name="uploadtime" Type="DateTime" Precision="3" />
+    <Property Name="storetime" Type="DateTime" Precision="3" />
+    <Property Name="savetype" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TH_MANUAL_RECORD">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="operater" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="operatingtype" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="operatingstate" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="statelevel" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="operatingtime" Type="DateTime" Precision="3" />
+    <Property Name="uploadtime" Type="DateTime" Precision="3" />
+    <Property Name="storetime" Type="DateTime" Precision="3" />
+    <Property Name="savetype" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="errordes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TH_SOFTWARE_STATE">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="errornum" Type="String" MaxLength="6" FixedLength="true" Unicode="true" />
+    <Property Name="modulename" Type="String" MaxLength="41" FixedLength="true" Unicode="true" />
+    <Property Name="statelevel" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="producetime" Type="DateTime" Precision="3" />
+    <Property Name="uploadtime" Type="DateTime" Precision="3" />
+    <Property Name="storetime" Type="DateTime" Precision="3" />
+    <Property Name="savetype" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="errordes" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TS_SOCKETLIB_CONFIG">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nodecomputername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="cityname" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="linename" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="stationname" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="terminaltype" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="clienttype" Type="Int32" Nullable="false" />
+    <Property Name="stationseq" Type="Int32" />
+    <Property Name="projectname" Type="String" MaxLength="21" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="modifytime" Type="DateTime" Precision="3" />
+    <Property Name="modifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="verifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="usedmark" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="citycode" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="position" Type="String" MaxLength="41" FixedLength="true" Unicode="true" />
+    <Property Name="screentype" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TD_UPDATE_STATE">
+    <Key>
+      <PropertyRef Name="updatenum" />
+      <PropertyRef Name="hardsn" />
+      <PropertyRef Name="computername" />
+    </Key>
+    <Property Name="updatenum" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="bdownload" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="downloadtime" Type="DateTime" Precision="3" />
+    <Property Name="bcompletion" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="completiontime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TD_VOTE_OPTION">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="VoteItemText" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VoteItemOption" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="VoteItemOptionText" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AddDate" Type="DateTime" Precision="3" />
+    <Property Name="BeginTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TH_COMMAND_RECORD">
+    <Key>
+      <PropertyRef Name="recordid" />
+    </Key>
+    <Property Name="recordid" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" />
+    <Property Name="commandnum" Type="String" MaxLength="6" FixedLength="true" Unicode="true" />
+    <Property Name="commanddata" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="storetime" Type="DateTime" Precision="3" />
+    <Property Name="destdes" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TH_OFFLINE_RECORD">
+    <Key>
+      <PropertyRef Name="recordid" />
+      <PropertyRef Name="hardsn" />
+      <PropertyRef Name="computername" />
+      <PropertyRef Name="cityname" />
+      <PropertyRef Name="linename" />
+      <PropertyRef Name="stationname" />
+      <PropertyRef Name="terminaltype" />
+      <PropertyRef Name="clienttype" />
+      <PropertyRef Name="projectname" />
+      <PropertyRef Name="offlinetime" />
+    </Key>
+    <Property Name="recordid" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="cityname" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="linename" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="stationname" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="terminaltype" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="clienttype" Type="Int32" Nullable="false" />
+    <Property Name="projectname" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="lastconnecttime" Type="DateTime" Precision="3" />
+    <Property Name="savetype" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="offlinetime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TH_PRIZE_RECORD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Contact" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="VisualId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ContactType" Type="Int32" />
+    <Property Name="PrizeUserCode" Type="String" MaxLength="65" FixedLength="false" Unicode="false" />
+    <Property Name="PrizeTime" Type="DateTime" Precision="3" />
+    <Property Name="Address" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TH_PRIZE_RULE">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="PrizeRule" Type="Int32" />
+    <Property Name="RuleData" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="BeginTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="MaxPrize" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TH_UPDATE_RECORD">
+    <Key>
+      <PropertyRef Name="updatenum" />
+      <PropertyRef Name="hardsn" />
+      <PropertyRef Name="computername" />
+    </Key>
+    <Property Name="updatenum" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="hardsn" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="computername" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="uptime" Type="DateTime" Precision="3" />
+    <Property Name="downtime" Type="DateTime" Precision="3" />
+    <Property Name="destdes" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TH_VOTE_RECORD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ComputerName" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="VisualId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Contact" Type="String" MaxLength="41" FixedLength="false" Unicode="false" />
+    <Property Name="ContactType" Type="Int32" />
+    <Property Name="VoteItem" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="VoteTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TH_VOTE_TOTAL">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityId" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="VoteItemA" Type="Int32" />
+    <Property Name="VoteItemB" Type="Int32" />
+    <Property Name="VoteItemC" Type="Int32" />
+    <Property Name="VoteItemD" Type="Int32" />
+    <Property Name="VoteItemE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TS_COMMAND_NUM">
+    <Key>
+      <PropertyRef Name="controlnum" />
+      <PropertyRef Name="statelevel" />
+      <PropertyRef Name="modifytime" />
+      <PropertyRef Name="usedmark" />
+    </Key>
+    <Property Name="controlnum" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="controltype" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Name="controlname" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="controldes" Type="String" MaxLength="41" FixedLength="true" Unicode="true" />
+    <Property Name="statelevel" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="verifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="usedmark" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TS_HARDWARE_STATENUM">
+    <Key>
+      <PropertyRef Name="errornum" />
+      <PropertyRef Name="statelevel" />
+      <PropertyRef Name="usedmark" />
+      <PropertyRef Name="errordes" />
+    </Key>
+    <Property Name="errornum" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="statelevel" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="subdevicetype" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="subdevicename" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="subdevicedes" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="modifytime" Type="DateTime" Precision="3" />
+    <Property Name="modifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="verifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="usedmark" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="errordes" Type="String" MaxLength="200" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TS_HARDWARE_TYPE">
+    <Key>
+      <PropertyRef Name="devicetype" />
+      <PropertyRef Name="devicename" />
+      <PropertyRef Name="subdevicetype" />
+      <PropertyRef Name="subdevicename" />
+      <PropertyRef Name="subdevicedes" />
+      <PropertyRef Name="modifytime" />
+      <PropertyRef Name="usedmark" />
+    </Key>
+    <Property Name="devicetype" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="devicename" Type="String" MaxLength="41" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="subdevicetype" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="subdevicename" Type="String" MaxLength="21" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="subdevicedes" Type="String" MaxLength="21" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="modifytime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="verifier" Type="String" MaxLength="21" FixedLength="true" Unicode="true" />
+    <Property Name="usedmark" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="socketlib_serverEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ActivityVote_SMS" EntityType="Self.ActivityVote_SMS" />
+    <EntitySet Name="TD_COMMAND_STATE" EntityType="Self.TD_COMMAND_STATE" />
+    <EntitySet Name="TH_HARDWARE_STATE" EntityType="Self.TH_HARDWARE_STATE" />
+    <EntitySet Name="TH_MANUAL_RECORD" EntityType="Self.TH_MANUAL_RECORD" />
+    <EntitySet Name="TH_SOFTWARE_STATE" EntityType="Self.TH_SOFTWARE_STATE" />
+    <EntitySet Name="TS_SOCKETLIB_CONFIG" EntityType="Self.TS_SOCKETLIB_CONFIG" />
+    <EntitySet Name="TD_UPDATE_STATE" EntityType="Self.TD_UPDATE_STATE" />
+    <EntitySet Name="TD_VOTE_OPTION" EntityType="Self.TD_VOTE_OPTION" />
+    <EntitySet Name="TH_COMMAND_RECORD" EntityType="Self.TH_COMMAND_RECORD" />
+    <EntitySet Name="TH_OFFLINE_RECORD" EntityType="Self.TH_OFFLINE_RECORD" />
+    <EntitySet Name="TH_PRIZE_RECORD" EntityType="Self.TH_PRIZE_RECORD" />
+    <EntitySet Name="TH_PRIZE_RULE" EntityType="Self.TH_PRIZE_RULE" />
+    <EntitySet Name="TH_UPDATE_RECORD" EntityType="Self.TH_UPDATE_RECORD" />
+    <EntitySet Name="TH_VOTE_RECORD" EntityType="Self.TH_VOTE_RECORD" />
+    <EntitySet Name="TH_VOTE_TOTAL" EntityType="Self.TH_VOTE_TOTAL" />
+    <EntitySet Name="TS_COMMAND_NUM" EntityType="Self.TS_COMMAND_NUM" />
+    <EntitySet Name="TS_HARDWARE_STATENUM" EntityType="Self.TS_HARDWARE_STATENUM" />
+    <EntitySet Name="TS_HARDWARE_TYPE" EntityType="Self.TS_HARDWARE_TYPE" />
+  </EntityContainer>
+</Schema>

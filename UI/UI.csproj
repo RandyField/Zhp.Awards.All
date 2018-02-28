@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A00A7DB-0A14-4932-B155-5EEF29066732}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\CashRedPocketController.cs" />
+    <Compile Include="Controllers\CommerceCityController.cs" />
+    <Compile Include="Controllers\DoubleElevenController.cs" />
+    <Compile Include="Controllers\GameCountController.cs" />
+    <Compile Include="Controllers\GetJsonUserInfoController.cs" />
+    <Compile Include="Controllers\GetWxUserInfoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JDDecController.cs" />
+    <Compile Include="Controllers\NewCityController.cs" />
+    <Compile Include="Controllers\OpenCountController.cs" />
+    <Compile Include="Controllers\PhoneGetController.cs" />
+    <Compile Include="Controllers\PostTestController.cs" />
+    <Compile Include="Controllers\RedPocketController.cs" />
+    <Compile Include="Controllers\ReGaoParkController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\RgParkController.cs" />
+    <Compile Include="Controllers\RiddleController.cs" />
+    <Compile Include="Controllers\ScanCountController.cs" />
+    <Compile Include="Controllers\SpringController.cs" />
+    <Compile Include="Controllers\SyylcController.cs" />
+    <Compile Include="Controllers\ValentinesDayController.cs" />
+    <Compile Include="Controllers\WdatController.cs" />
+    <Compile Include="Controllers\WdbylController.cs" />
+    <Compile Include="Controllers\WdtxController.cs" />
+    <Compile Include="Controllers\WdtyjController.cs" />
+    <Compile Include="Controllers\WxPayController.cs" />
+    <Compile Include="Controllers\YuLongCityController.cs" />
+    <Compile Include="Controllers\ZTECityController.cs" />
+    <Compile Include="Controllers\ZTEController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\WxGetTokenController.cs" />
+    <Compile Include="Controllers\YHEyeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RequestModel.cs" />
+    <Compile Include="Models\RightModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\main.css" />
+    <Content Include="Content\image\CommerceCity\A.jpg" />
+    <Content Include="Content\image\CommerceCity\B.jpg" />
+    <Content Include="Content\image\CommerceCity\btnclick.png" />
+    <Content Include="Content\image\CommerceCity\C.jpg" />
+    <Content Include="Content\image\CommerceCity\cashtip.jpg" />
+    <Content Include="Content\image\CommerceCity\D.jpg" />
+    <Content Include="Content\image\CommerceCity\E.jpg" />
+    <Content Include="Content\image\CommerceCity\F.jpg" />
+    <Content Include="Content\image\CommerceCity\G.jpg" />
+    <Content Include="Content\image\CommerceCity\H.jpg" />
+    <Content Include="Content\image\CommerceCity\hadattend.jpg" />
+    <Content Include="Content\image\CommerceCity\I.jpg" />
+    <Content Include="Content\image\CommerceCity\J.jpg" />
+    <Content Include="Content\image\CommerceCity\nochance.jpg" />
+    <Content Include="Content\image\CommerceCity\outofdate.jpg" />
+    <Content Include="Content\image\common\stamp-black.png" />
+    <Content Include="Content\image\common\stamp-red.png" />
+    <Content Include="Content\image\common\stamp-white.png" />
+    <Content Include="Content\image\common\stamp.png" />
+    <Content Include="Content\image\GDBank\hadreceived.jpg" />
+    <Content Include="Content\image\GDBank\notice.jpg" />
+    <Content Include="Content\image\JD11\A.png" />
+    <Content Include="Content\image\JD11\B.png" />
+    <Content Include="Content\image\JD11\C.png" />
+    <Content Include="Content\image\JD11\D.png" />
+    <Content Include="Content\image\JD11\E.png" />
+    <Content Include="Content\image\JD11\F.png" />
+    <Content Include="Content\image\JD11\G.png" />
+    <Content Include="Content\image\JD11\H.png" />
+    <Content Include="Content\image\JD11\HadAttend.png" />
+    <Content Include="Content\image\JD11\I.png" />
+    <Content Include="Content\image\JD11\Nogift.jpg" />
+    <Content Include="Content\image\JD12\A.jpg" />
+    <Content Include="Content\image\JD12\B.jpg" />
+    <Content Include="Content\image\JD12\C.jpg" />
+    <Content Include="Content\image\JD12\D.jpg" />
+    <Content Include="Content\image\JD12\HadAttend.jpg" />
+    <Content Include="Content\image\JD12\Nogift.jpg" />
+    <Content Include="Content\image\NewCity\100元.jpg" />
+    <Content Include="Content\image\NewCity\btnclick.png" />
+    <Content Include="Content\image\NewCity\cashtip.jpg" />
+    <Content Include="Content\image\NewCity\hadattend.jpg" />
+    <Content Include="Content\image\NewCity\mooncake.jpg" />
+    <Content Include="Content\image\NewCity\nochance.jpg" />
+    <Content Include="Content\image\NewCity\outofdate.jpg" />
+    <Content Include="Content\image\NewCity\一叶一生.jpg" />
+    <Content Include="Content\image\NewCity\健身卡.jpg" />
+    <Content Include="Content\image\NewCity\公社5折券.jpg" />
+    <Content Include="Content\image\NewCity\南山余闲.jpg" />
+    <Content Include="Content\image\NewCity\含花束.jpg" />
+    <Content Include="Content\image\NewCity\咖啡券.jpg" />
+    <Content Include="Content\image\NewCity\圆春饼.jpg" />
+    <Content Include="Content\image\NewCity\在宥.jpg" />
+    <Content Include="Content\image\NewCity\大麦若叶.jpg" />
+    <Content Include="Content\image\NewCity\工社3折券.jpg" />
+    <Content Include="Content\image\NewCity\美甲30元.jpg" />
+    <Content Include="Content\image\NewCity\美甲护理.jpg" />
+    <Content Include="Content\image\NewCity\萌宠之家.jpg" />
+    <Content Include="Content\image\NewCity\魅可发妆.jpg" />
+    <Content Include="Content\image\ReGaoPark\cash.jpg" />
+    <Content Include="Content\image\ReGaoPark\hadReceived.jpg" />
+    <Content Include="Content\image\ReGaoPark\notebook.jpg" />
+    <Content Include="Content\image\ReGaoPark\outofdate.jpg" />
+    <Content Include="Content\image\RgPark\Received.jpg" />
+    <Content Include="Content\image\RgPark\A.jpg" />
+    <Content Include="Content\image\RgPark\B.jpg" />
+    <Content Include="Content\image\RgPark\C.jpg" />
+    <Content Include="Content\image\RgPark\D.jpg" />
+    <Content Include="Content\image\RgPark\E.jpg" />
+    <Content Include="Content\image\RgPark\HadAttend.jpg" />
+    <Content Include="Content\image\RgPark\Nogift.jpg" />
+    <Content Include="Content\image\RgPark\按钮.png" />
+    <Content Include="Content\image\Spring\A.jpg" />
+    <Content Include="Content\image\Spring\B.jpg" />
+    <Content Include="Content\image\Spring\C.jpg" />
+    <Content Include="Content\image\Spring\D.jpg" />
+    <Content Include="Content\image\Spring\E.jpg" />
+    <Content Include="Content\image\Spring\F.jpg" />
+    <Content Include="Content\image\Spring\hadattend.jpg" />
+    <Content Include="Content\image\Spring\Nogift.jpg" />
+    <Content Include="Content\image\Spring\outofdate.jpg" />
+    <Content Include="Content\image\Syylc\A.jpg" />
+    <Content Include="Content\image\Syylc\B.jpg" />
+    <Content Include="Content\image\Syylc\btnclick.png" />
+    <Content Include="Content\image\Syylc\C.jpg" />
+    <Content Include="Content\image\Syylc\cashtip.jpg" />
+    <Content Include="Content\image\Syylc\D.jpg" />
+    <Content Include="Content\image\Syylc\E.jpg" />
+    <Content Include="Content\image\Syylc\hadattend.jpg" />
+    <Content Include="Content\image\Syylc\nochance.jpg" />
+    <Content Include="Content\image\Syylc\outofdate.jpg" />
+    <Content Include="Content\image\ValentinesDay\award1.png" />
+    <Content Include="Content\image\ValentinesDay\award2.png" />
+    <Content Include="Content\image\ValentinesDay\award3.png" />
+    <Content Include="Content\image\Wdat\A.jpg" />
+    <Content Include="Content\image\Wdat\B.jpg" />
+    <Content Include="Content\image\Wdat\C.jpg" />
+    <Content Include="Content\image\Wdat\D.jpg" />
+    <Content Include="Content\image\Wdat\E.jpg" />
+    <Content Include="Content\image\Wdat\F.jpg" />
+    <Content Include="Content\image\Wdat\G.jpg" />
+    <Content Include="Content\image\Wdat\H.jpg" />
+    <Content Include="Content\image\Wdat\hadattend.jpg" />
+    <Content Include="Content\image\Wdat\I.jpg" />
+    <Content Include="Content\image\Wdat\J.jpg" />
+    <Content Include="Content\image\Wdat\K.jpg" />
+    <Content Include="Content\image\Wdat\L.jpg" />
+    <Content Include="Content\image\Wdat\M.jpg" />
+    <Content Include="Content\image\Wdat\N.jpg" />
+    <Content Include="Content\image\Wdat\nochance.jpg" />
+    <Content Include="Content\image\Wdat\O.jpg" />
+    <Content Include="Content\image\Wdat\outofdate.jpg" />
+    <Content Include="Content\image\Wdat\P.jpg" />
+    <Content Include="Content\image\Wdat\Q.jpg" />
+    <Content Include="Content\image\Wdat\R.jpg" />
+    <Content Include="Content\image\Wdat\S.jpg" />
+    <Content Include="Content\image\Wdat\T.jpg" />
+    <Content Include="Content\image\Wdat\U.jpg" />
+    <Content Include="Content\image\Wdbyl\A.jpg" />
+    <Content Include="Content\image\Wdbyl\B.jpg" />
+    <Content Include="Content\image\Wdbyl\C.jpg" />
+    <Content Include="Content\image\Wdbyl\D.jpg" />
+    <Content Include="Content\image\Wdbyl\E.jpg" />
+    <Content Include="Content\image\Wdbyl\F.jpg" />
+    <Content Include="Content\image\Wdbyl\G.jpg" />
+    <Content Include="Content\image\Wdbyl\H.jpg" />
+    <Content Include="Content\image\Wdbyl\hadattend.jpg" />
+    <Content Include="Content\image\Wdbyl\nochance.jpg" />
+    <Content Include="Content\image\Wdbyl\outofdate.jpg" />
+    <Content Include="Content\image\Wdtx\A.jpg" />
+    <Content Include="Content\image\Wdtx\B.jpg" />
+    <Content Include="Content\image\Wdtx\C.jpg" />
+    <Content Include="Content\image\Wdtx\D.jpg" />
+    <Content Include="Content\image\Wdtx\E.jpg" />
+    <Content Include="Content\image\Wdtx\F.jpg" />
+    <Content Include="Content\image\Wdtx\G.jpg" />
+    <Content Include="Content\image\Wdtx\hadattend.jpg" />
+    <Content Include="Content\image\Wdtx\nochance.jpg" />
+    <Content Include="Content\image\Wdtx\outofdate.jpg" />
+    <Content Include="Content\image\Wdtyj\A.jpg" />
+    <Content Include="Content\image\Wdtyj\B.jpg" />
+    <Content Include="Content\image\Wdtyj\C.jpg" />
+    <Content Include="Content\image\Wdtyj\D.jpg" />
+    <Content Include="Content\image\Wdtyj\E.jpg" />
+    <Content Include="Content\image\Wdtyj\F.jpg" />
+    <Content Include="Content\image\Wdtyj\G.jpg" />
+    <Content Include="Content\image\Wdtyj\H.jpg" />
+    <Content Include="Content\image\Wdtyj\nochance.jpg" />
+    <Content Include="Content\image\Wdtyj\I.jpg" />
+    <Content Include="Content\image\Wdtyj\J.jpg" />
+    <Content Include="Content\image\Wdtyj\K.jpg" />
+    <Content Include="Content\image\Wdtyj\L.jpg" />
+    <Content Include="Content\image\Wdtyj\M.jpg" />
+    <Content Include="Content\image\Wdtyj\hadattend.jpg" />
+    <Content Include="Content\image\Wdtyj\outofdate.jpg" />
+    <Content Include="Content\image\YHEye\100.jpg" />
+    <Content Include="Content\image\YHEye\100Received.jpg" />
+    <Content Include="Content\image\YHEye\clipper.jpg" />
+    <Content Include="Content\image\YHEye\clipperReceived.jpg" />
+    <Content Include="Content\image\YHEye\EyeMe.jpg" />
+    <Content Include="Content\image\YHEye\EyeMeReceived.jpg" />
+    <Content Include="Content\image\YHEye\fan.jpg" />
+    <Content Include="Content\image\YHEye\fanReceived.jpg" />
+    <Content Include="Content\image\YHEye\Hadattend.jpg" />
+    <Content Include="Content\image\YHEye\OutOfDate.jpg" />
+    <Content Include="Content\image\YuLongCity\A1.jpg" />
+    <Content Include="Content\image\YuLongCity\B1.jpg" />
+    <Content Include="Content\image\YuLongCity\C1.jpg" />
+    <Content Include="Content\image\YuLongCity\cashtip.jpg" />
+    <Content Include="Content\image\YuLongCity\D1.jpg" />
+    <Content Include="Content\image\YuLongCity\E1.jpg" />
+    <Content Include="Content\image\YuLongCity\hadattend.jpg" />
+    <Content Include="Content\image\YuLongCity\btnclick.png" />
+    <Content Include="Content\image\YuLongCity\nochance.jpg" />
+    <Content Include="Content\image\YuLongCity\outofdate.jpg" />
+    <Content Include="Content\image\ZTECity\10.jpg" />
+    <Content Include="Content\image\ZTECity\11.jpg" />
+    <Content Include="Content\image\ZTECity\12.jpg" />
+    <Content Include="Content\image\ZTECity\13.jpg" />
+    <Content Include="Content\image\ZTECity\14.jpg" />
+    <Content Include="Content\image\ZTECity\15.jpg" />
+    <Content Include="Content\image\ZTECity\16.jpg" />
+    <Content Include="Content\image\ZTECity\17.jpg" />
+    <Content Include="Content\image\ZTECity\18.jpg" />
+    <Content Include="Content\image\ZTECity\19.jpg" />
+    <Content Include="Content\image\ZTECity\2.jpg" />
+    <Content Include="Content\image\ZTECity\20.jpg" />
+    <Content Include="Content\image\ZTECity\21.jpg" />
+    <Content Include="Content\image\ZTECity\22.jpg" />
+    <Content Include="Content\image\ZTECity\23.jpg" />
+    <Content Include="Content\image\ZTECity\24.jpg" />
+    <Content Include="Content\image\ZTECity\3.jpg" />
+    <Content Include="Content\image\ZTECity\4.jpg" />
+    <Content Include="Content\image\ZTECity\5.jpg" />
+    <Content Include="Content\image\ZTECity\6.jpg" />
+    <Content Include="Content\image\ZTECity\7.jpg" />
+    <Content Include="Content\image\ZTECity\8.jpg" />
+    <Content Include="Content\image\ZTECity\9.jpg" />
+    <Content Include="Content\image\ZTECity\cashtip.jpg" />
+    <Content Include="Content\image\ZTECity\A.png" />
+    <Content Include="Content\image\ZTECity\hadattend.jpg" />
+    <Content Include="Content\image\ZTECity\btnclick.png" />
+    <Content Include="Content\image\ZTECity\nochance.jpg" />
+    <Content Include="Content\image\ZTECity\outofdate.jpg" />
+    <Content Include="Content\image\ZTE\30yuan.jpg" />
+    <Content Include="Content\image\ZTE\btnclick.png" />
+    <Content Include="Content\image\ZTE\cashtip.jpg" />
+    <Content Include="Content\image\ZTE\discount.jpg" />
+    <Content Include="Content\image\ZTE\hadattend.jpg" />
+    <Content Include="Content\image\ZTE\key.jpg" />
+    <Content Include="Content\image\ZTE\nochance.jpg" />
+    <Content Include="Content\image\ZTE\outofdate.jpg" />
+    <Content Include="Content\image\ZTE\paper.jpg" />
+    <Content Include="Content\image\ZTE\stamp.png" />
+    <Content Include="Content\image\ZTE\supermarket.jpg" />
+    <Content Include="Content\js\App\DataTable.js" />
+    <Content Include="Content\js\jquery-1.10.2.min.js" />
+    <Content Include="Content\js\jquery-2.0.3.min.js" />
+    <Content Include="Content\wd\layer.css" />
+    <Content Include="Content\wd\main.css" />
+    <Content Include="Content\wd\award.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Log4Net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\hothighpark.pubxml" />
+    <None Include="Scripts\jquery-1.11.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.11.1.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\dialog.js" />
+    <Content Include="Scripts\js\jquery-1.js" />
+    <Content Include="Scripts\js\rem.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\wd\event.js" />
+    <Content Include="Scripts\wd\fx.js" />
+    <Content Include="Scripts\wd\hm.js" />
+    <Content Include="Scripts\wd\jweixin-1.js" />
+    <Content Include="Scripts\wd\layer.js" />
+    <Content Include="Scripts\wd\main.js" />
+    <Content Include="Scripts\wd\preloadjs-0.js" />
+    <Content Include="Scripts\wd\rem.js" />
+    <Content Include="Scripts\wd\zepto.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_ListLayout.cshtml" />
+    <Content Include="Views\Shared\_Layout.Navbar.cshtml" />
+    <Content Include="Views\Shared\_Layout.Menu.cshtml" />
+    <Content Include="Views\Shared\_Layout.Setting.cshtml" />
+    <Content Include="Views\Shared\_AddLayout.cshtml" />
+    <Content Include="Views\Shared\tips\_bs.modal.deletTips.cshtml" />
+    <Content Include="Views\Shared\tips\_bs.modal.deletSuccess.cshtml" />
+    <Content Include="Views\Shared\tips\_bs.modal.deletFail.cshtml" />
+    <Content Include="Views\Shared\Login.cshtml" />
+    <Content Include="Views\Shared\tips\_bs.modal.detail.cshtml" />
+    <Content Include="Views\WxGetToken\Index.cshtml" />
+    <Content Include="Views\RedPocket\Index.cshtml" />
+    <Content Include="Views\RedPocket\HasAttend.cshtml" />
+    <Content Include="Views\RedPocket\HasScan.cshtml" />
+    <Content Include="Views\RedPocket\Error.cshtml" />
+    <Content Include="Views\GetWxUserInfo\Index.cshtml" />
+    <Content Include="Views\Shared\tips\tips.modal.cshtml" />
+    <Content Include="Views\Shared\tips\tips.modal.receiving.cshtml" />
+    <Content Include="Views\GDBank\GDActivity.cshtml" />
+    <Content Include="Views\GDBank\HadReceived.cshtml" />
+    <Content Include="Views\ReGaoPark\Activity.cshtml" />
+    <Content Include="Views\ReGaoPark\GiveMoney.cshtml" />
+    <Content Include="Views\PostTest\Index.cshtml" />
+    <Content Include="Views\Test\Activity.cshtml" />
+    <Content Include="Views\Test\GiveMoney.cshtml" />
+    <Content Include="Views\Test\OutOfDate.cshtml" />
+    <Content Include="Views\YHEye\WXActivity.cshtml" />
+    <Content Include="Views\YHEye\OutOfDate.cshtml" />
+    <Content Include="Views\YHEye\HasAttend.cshtml" />
+    <Content Include="Views\ZTE\Activity.cshtml" />
+    <Content Include="Views\ZTE\GiveMoney.cshtml" />
+    <Content Include="Views\ZTE\OutOfDate.cshtml" />
+    <Content Include="Views\ZTE\HadAttend.cshtml" />
+    <Content Include="Views\ZTE\Nogift.cshtml" />
+    <Content Include="Views\NewCity\Activity.cshtml" />
+    <Content Include="Views\NewCity\GiveMoney.cshtml" />
+    <Content Include="Views\NewCity\HadAttend.cshtml" />
+    <Content Include="Views\NewCity\Nogift.cshtml" />
+    <Content Include="Views\NewCity\OutOfDate.cshtml" />
+    <Content Include="Views\YuLongCity\Activity.cshtml" />
+    <Content Include="Views\CommerceCity\Activity.cshtml" />
+    <Content Include="Views\CommerceCity\GiveMoney.cshtml" />
+    <Content Include="Views\CommerceCity\HadAttend.cshtml" />
+    <Content Include="Views\CommerceCity\Nogift.cshtml" />
+    <Content Include="Views\CommerceCity\OutOfDate.cshtml" />
+    <Content Include="Views\YuLongCity\GiveMoney.cshtml" />
+    <Content Include="Views\YuLongCity\HadAttend.cshtml" />
+    <Content Include="Views\YuLongCity\Nogift.cshtml" />
+    <Content Include="Views\YuLongCity\OutOfDate.cshtml" />
+    <Content Include="Views\DoubleEleven\Activity.cshtml" />
+    <Content Include="Views\DoubleEleven\HadAttend.cshtml" />
+    <Content Include="Views\DoubleEleven\Nogift.cshtml" />
+    <Content Include="Views\Spring\Activity.cshtml" />
+    <Content Include="Views\Spring\HadAttend.cshtml" />
+    <Content Include="Views\Spring\Nogift.cshtml" />
+    <Content Include="Views\Shared\tips\tips.modal.success.cshtml" />
+    <Content Include="Views\Spring\OutOfDate.cshtml" />
+    <Content Include="Views\ZTECity\Activity.cshtml" />
+    <Content Include="Views\ZTECity\GiveMoney.cshtml" />
+    <Content Include="Views\ZTECity\HadAttend.cshtml" />
+    <Content Include="Views\ZTECity\Nogift.cshtml" />
+    <Content Include="Views\ZTECity\OutOfDate.cshtml" />
+    <Content Include="Views\JDDec\Activity.cshtml" />
+    <Content Include="Views\JDDec\HadAttend.cshtml" />
+    <Content Include="Views\JDDec\Nogift.cshtml" />
+    <Content Include="Views\Wdtx\Activity.cshtml" />
+    <Content Include="Views\Wdtx\HadAttend.cshtml" />
+    <Content Include="Views\Wdtx\Nogift.cshtml" />
+    <Content Include="Views\Wdtx\OutOfDate.cshtml" />
+    <Content Include="Views\Wdtyj\Activity.cshtml" />
+    <Content Include="Views\Wdtyj\HadAttend.cshtml" />
+    <Content Include="Views\Wdtyj\Nogift.cshtml" />
+    <Content Include="Views\Wdtyj\OutOfDate.cshtml" />
+    <Content Include="Views\Wdbyl\Activity.cshtml" />
+    <Content Include="Views\Wdbyl\HadAttend.cshtml" />
+    <Content Include="Views\Wdbyl\Nogift.cshtml" />
+    <Content Include="Views\Wdbyl\OutOfDate.cshtml" />
+    <Content Include="Views\Syylc\Activity.cshtml" />
+    <Content Include="Views\Syylc\GiveMoney.cshtml" />
+    <Content Include="Views\Syylc\HadAttend.cshtml" />
+    <Content Include="Views\Syylc\Nogift.cshtml" />
+    <Content Include="Views\Syylc\OutOfDate.cshtml" />
+    <Content Include="Views\Wdat\Activity.cshtml" />
+    <Content Include="Views\Wdat\HadAttend.cshtml" />
+    <Content Include="Views\Wdat\Nogift.cshtml" />
+    <Content Include="Views\Wdat\OutOfDate.cshtml" />
+    <Content Include="Views\RgPark\Activity.cshtml" />
+    <Content Include="Views\RgPark\HadAttend.cshtml" />
+    <Content Include="Views\RgPark\Nogift.cshtml" />
+    <None Include="Views\RgPark\Received.cshtml" />
+    <Content Include="Views\Riddle\Activity.cshtml" />
+    <Content Include="Views\Riddle\HadAttend.cshtml" />
+    <Content Include="Views\Riddle\Nogift.cshtml" />
+    <Content Include="Views\Riddle\OutOfDate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\image\Riddle\" />
+    <Folder Include="Filter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{78035f23-a977-419b-a681-30c46817a1b5}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{dc206e30-27f3-4a39-a4bf-7aac221374e6}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFModel\EFModel.csproj">
+      <Project>{8c6b2d83-9012-471d-977b-224b0f236838}</Project>
+      <Name>EFModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{6421687e-186b-41e9-a610-828ff68bc3c9}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NinjectDI\NinjectDI.csproj">
+      <Project>{d5c15877-8d8c-4c87-b662-2b4c48965fbb}</Project>
+      <Name>NinjectDI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension.csproj">
+      <Project>{ee8630bc-6191-4c40-9061-12c76342562d}</Project>
+      <Name>Senparc.Weixin.MP.MvcExtension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Senparc.Weixin.MP\Senparc.Weixin.MP\Senparc.Weixin.MP.csproj">
+      <Project>{1d815fbf-451c-4e23-939c-cb80172f445c}</Project>
+      <Name>Senparc.Weixin.MP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Senparc.Weixin\Senparc.Weixin\Senparc.Weixin.csproj">
+      <Project>{814092cd-9cd0-4fb7-91e8-d147f476f1fb}</Project>
+      <Name>Senparc.Weixin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3042</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19638/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

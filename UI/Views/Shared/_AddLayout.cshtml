@@ -1,0 +1,42 @@
+﻿<div class="breadcrumbs" id="breadcrumbs">
+    <script type="text/javascript">
+        try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+    </script>
+
+    <ul class="breadcrumb">
+        <li>
+            <i class="icon-home home-icon"></i>
+            <a href="#">位置</a>
+        </li>
+
+        <li>
+            <a href="#">@ViewBag.Title</a>
+        </li>
+        <li class="active">@ViewBag.subTitle</li>
+    </ul>
+    <!-- .breadcrumb -->
+</div>
+
+<div class="page-content">
+    <div class="page-header">
+        <h1>@ViewBag.Title
+            <small>
+                <i class="icon-double-angle-right"></i>
+                @ViewBag.subTitle
+            </small>
+        </h1>
+    </div>
+    <!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+
+            @RenderBody()
+            <!-- PAGE CONTENT ENDS -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.page-content -->
