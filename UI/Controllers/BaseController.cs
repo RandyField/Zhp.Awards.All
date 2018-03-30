@@ -94,7 +94,7 @@ namespace UI.Controllers
             bool IsInDate = false;
             try
             {
-                IsInDate = QRCodeScanLimitedDI.getBll().IsOverTime(activityId, QRRCode, limitedTime);
+                IsInDate = QRCodeScanLimitedDI.getBll().IsInDate(activityId, QRRCode, limitedTime);
             }
             catch (Exception ex)
             {

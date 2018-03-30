@@ -17,3 +17,8 @@ E:\GitHub\RedPackets3.0\Model\bin\Release\Model.pdb
 E:\GitHub\RedPackets3.0\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 E:\GitHub\RedPackets3.0\Model\obj\Release\Model.dll
 E:\GitHub\RedPackets3.0\Model\obj\Release\Model.pdb
+C:\github\Zhp.Awards.All\Model\bin\Release\Model.dll
+C:\github\Zhp.Awards.All\Model\bin\Release\Model.pdb
+C:\github\Zhp.Awards.All\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+C:\github\Zhp.Awards.All\Model\obj\Release\Model.dll
+C:\github\Zhp.Awards.All\Model\obj\Release\Model.pdb

@@ -53,3 +53,14 @@ E:\GitHub\RedPackets3.0\EFModel\bin\Release\zh-Hans\EntityFramework.resources.dl
 E:\GitHub\RedPackets3.0\EFModel\obj\Release\EFModel.csprojResolveAssemblyReference.cache
 E:\GitHub\RedPackets3.0\EFModel\obj\Release\EFModel.dll
 E:\GitHub\RedPackets3.0\EFModel\obj\Release\EFModel.pdb
+C:\github\Zhp.Awards.All\EFModel\bin\Release\EFModel.dll.config
+C:\github\Zhp.Awards.All\EFModel\bin\Release\EFModel.dll
+C:\github\Zhp.Awards.All\EFModel\bin\Release\EFModel.pdb
+C:\github\Zhp.Awards.All\EFModel\bin\Release\EntityFramework.dll
+C:\github\Zhp.Awards.All\EFModel\bin\Release\Model.dll
+C:\github\Zhp.Awards.All\EFModel\bin\Release\Model.pdb
+C:\github\Zhp.Awards.All\EFModel\bin\Release\EntityFramework.xml
+C:\github\Zhp.Awards.All\EFModel\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\github\Zhp.Awards.All\EFModel\obj\Release\EFModel.csprojResolveAssemblyReference.cache
+C:\github\Zhp.Awards.All\EFModel\obj\Release\EFModel.dll
+C:\github\Zhp.Awards.All\EFModel\obj\Release\EFModel.pdb

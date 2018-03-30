@@ -29,7 +29,7 @@ namespace BLL
         /// 
         /// </summary>
         /// <param name="activityId"></param>
-        public bool IsOverTime(string activityId, string QRRCode, int limitedTime)
+        public bool IsInDate(string activityId, string QRRCode, int limitedTime)
         {
             lock (asyncLock)
             {
@@ -60,24 +60,27 @@ namespace BLL
                         else
                         {
                             TRP_QRCodeScanLimited model = list.FirstOrDefault();
-                            model.LimitedCount = model.LimitedCount + 1;
-                            model.UpdateTime = DateTime.Now;
-                            idal.Edit(model);
-                            idal.Save();
-                            if (Convert.ToInt32(model.LimitedCount) <= limitedTime)
-                            {
-                                isExpiryDate = true;
-                            }
-                            else
+                           
+                            //二维码已经过期
+                            if (Convert.ToInt32(model.LimitedCount) >= limitedTime)
                             {
                                 isExpiryDate = false;
+                            }
+                                //二维码还未过期，次数累计
+                            else
+                            {
+                                isExpiryDate = true;
+                                model.LimitedCount = model.LimitedCount + 1;
+                                model.UpdateTime = DateTime.Now;
+                                idal.Edit(model);
+                                idal.Save();
                             }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    Logger.Error(string.Format("红包打开计数异常，异常信息：{0}", ex.ToString()));
+                    Logger.Error(string.Format("二维码guid扫码计数异常，异常信息：{0}", ex.ToString()));
                 }
                 return isExpiryDate;
             }

@@ -37,3 +37,12 @@ E:\GitHub\RedPackets3.0\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExte
 E:\GitHub\RedPackets3.0\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\obj\Release\Senparc.Weixin.MP.MvcExtension.csprojResolveAssemblyReference.cache
 E:\GitHub\RedPackets3.0\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\obj\Release\Hightop.Weixin.MP.MvcExtension.dll
 E:\GitHub\RedPackets3.0\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\obj\Release\Hightop.Weixin.MP.MvcExtension.pdb
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\bin\Debug\Hightop.Weixin.MP.MvcExtension.dll
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\bin\Debug\Hightop.Weixin.MP.MvcExtension.pdb
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\bin\Debug\Hightop.Weixin.dll
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\bin\Debug\Hightop.Weixin.MP.dll
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\bin\Debug\Hightop.Weixin.MP.pdb
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\bin\Debug\Hightop.Weixin.pdb
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\obj\Release\Senparc.Weixin.MP.MvcExtension.csprojResolveAssemblyReference.cache
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\obj\Release\Hightop.Weixin.MP.MvcExtension.dll
+C:\github\Zhp.Awards.All\Senparc.Weixin.MP.MvcExtension\Senparc.Weixin.MP.MvcExtension\obj\Release\Hightop.Weixin.MP.MvcExtension.pdb

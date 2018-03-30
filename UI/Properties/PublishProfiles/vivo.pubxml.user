@@ -1,0 +1,1279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\vivo-publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>03/27/2018 14:31:34</publishTime>
+    </File>
+    <File Include="bin/BLL.dll">
+      <publishTime>03/31/2018 00:30:40</publishTime>
+    </File>
+    <File Include="bin/Common.dll">
+      <publishTime>03/30/2018 00:37:54</publishTime>
+    </File>
+    <File Include="bin/DAL.dll">
+      <publishTime>03/30/2018 00:37:58</publishTime>
+    </File>
+    <File Include="bin/EFModel.dll">
+      <publishTime>03/30/2018 00:37:53</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/27/2018 14:31:31</publishTime>
+    </File>
+    <File Include="bin/Hightop.Weixin.dll">
+      <publishTime>03/30/2018 00:37:49</publishTime>
+    </File>
+    <File Include="bin/Hightop.Weixin.MP.dll">
+      <publishTime>03/30/2018 00:37:54</publishTime>
+    </File>
+    <File Include="bin/Hightop.Weixin.MP.MvcExtension.dll">
+      <publishTime>03/30/2018 00:37:56</publishTime>
+    </File>
+    <File Include="bin/Interface.dll">
+      <publishTime>03/30/2018 00:37:57</publishTime>
+    </File>
+    <File Include="bin/Log4Net.config">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>03/27/2018 14:31:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/Model.dll">
+      <publishTime>03/30/2018 00:37:48</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/27/2018 14:31:33</publishTime>
+    </File>
+    <File Include="bin/Ninject.dll">
+      <publishTime>03/27/2018 14:31:33</publishTime>
+    </File>
+    <File Include="bin/NinjectDI.dll">
+      <publishTime>03/31/2018 00:30:41</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/27/2018 14:31:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/UI.dll">
+      <publishTime>03/31/2018 00:30:43</publishTime>
+    </File>
+    <File Include="bin/Untility.dll">
+      <publishTime>03/30/2018 00:37:49</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>03/27/2018 14:31:34</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.resources.dll">
+      <publishTime>03/27/2018 14:31:31</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Optimization.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Providers.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>03/27/2018 14:31:32</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/css/main.css">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/btnclick.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/cashtip.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/E.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/F.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/G.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/H.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/I.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/J.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/CommerceCity/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/common/stamp-black.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/common/stamp-red.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/common/stamp-white.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/common/stamp.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/GDBank/hadreceived.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/GDBank/notice.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/A.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/B.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/C.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/D.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/E.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/F.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/G.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/H.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/HadAttend.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/I.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD11/Nogift.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD12/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD12/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD12/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD12/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD12/HadAttend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/JD12/Nogift.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/100元.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/btnclick.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/cashtip.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/mooncake.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/一叶一生.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/健身卡.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/公社5折券.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/南山余闲.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/含花束.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/咖啡券.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/圆春饼.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/在宥.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/大麦若叶.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/工社3折券.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/美甲30元.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/美甲护理.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/萌宠之家.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/NewCity/魅可发妆.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ReGaoPark/cash.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ReGaoPark/hadReceived.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ReGaoPark/notebook.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ReGaoPark/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/E.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/HadAttend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/Nogift.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/Received.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/RgPark/按钮.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/E.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/F.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/Nogift.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Spring/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/btnclick.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/cashtip.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/E.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Syylc/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ValentinesDay/award1.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ValentinesDay/award2.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ValentinesDay/award3.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/vivo/A.jpg">
+      <publishTime>03/28/2018 10:52:31</publishTime>
+    </File>
+    <File Include="Content/image/vivo/B.jpg">
+      <publishTime>03/28/2018 10:52:32</publishTime>
+    </File>
+    <File Include="Content/image/vivo/C.jpg">
+      <publishTime>03/28/2018 10:52:32</publishTime>
+    </File>
+    <File Include="Content/image/vivo/D.jpg">
+      <publishTime>03/28/2018 10:52:31</publishTime>
+    </File>
+    <File Include="Content/image/vivo/HadAttend.jpg">
+      <publishTime>03/28/2018 10:52:32</publishTime>
+    </File>
+    <File Include="Content/image/vivo/Nogift.jpg">
+      <publishTime>03/28/2018 10:52:32</publishTime>
+    </File>
+    <File Include="Content/image/vivo/OutOfDate.jpg">
+      <publishTime>03/28/2018 10:52:32</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/E.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/F.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/G.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/H.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/I.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/J.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/K.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/L.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/M.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/N.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/O.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/P.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/Q.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/R.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/S.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/T.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdat/U.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/E.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/F.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/G.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/H.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdbyl/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/E.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/F.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/G.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtx/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/A.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/B.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/C.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/D.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/E.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/F.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/G.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/H.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/I.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/J.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/K.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/L.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/M.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/Wdtyj/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/100.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/100Received.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/clipper.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/clipperReceived.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/EyeMe.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/EyeMeReceived.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/fan.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/fanReceived.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/Hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YHEye/OutOfDate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/A1.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/B1.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/btnclick.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/C1.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/cashtip.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/D1.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/E1.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/YuLongCity/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/30yuan.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/btnclick.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/cashtip.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/discount.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/key.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/paper.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/stamp.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTE/supermarket.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/10.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/11.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/12.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/13.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/14.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/15.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/16.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/17.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/18.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/19.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/2.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/20.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/21.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/22.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/23.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/24.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/3.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/4.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/5.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/6.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/7.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/8.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/9.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/A.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/btnclick.png">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/cashtip.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/hadattend.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/nochance.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/image/ZTECity/outofdate.jpg">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/js/App/DataTable.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/js/jquery-1.10.2.min.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/js/jquery-2.0.3.min.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/wd/award.css">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/wd/layer.css">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Content/wd/main.css">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Log4Net.config">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/27/2018 14:31:30</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.1.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.1.min.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.11.1.min.map">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.20.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.20.min.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.unobtrusive-ajax.min.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/js/dialog.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/js/jquery-1.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/js/rem.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.1.0.debug.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.1.0.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.5.3.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/wd/event.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/wd/fx.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/wd/hm.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/wd/jweixin-1.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/wd/layer.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/wd/main.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/wd/preloadjs-0.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Scripts/wd/rem.js">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Scripts/wd/zepto.js">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>03/27/2018 14:31:28</publishTime>
+    </File>
+    <File Include="Views/CommerceCity/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/CommerceCity/GiveMoney.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/CommerceCity/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/CommerceCity/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/CommerceCity/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/DoubleEleven/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/DoubleEleven/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/DoubleEleven/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/GDBank/GDActivity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/GDBank/HadReceived.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/GetWxUserInfo/Index.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/JDDec/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/JDDec/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/JDDec/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/NewCity/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/NewCity/GiveMoney.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/NewCity/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/NewCity/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/NewCity/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/PostTest/Index.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/RedPocket/Error.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/RedPocket/HasAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/RedPocket/HasScan.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/RedPocket/Index.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ReGaoPark/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ReGaoPark/GiveMoney.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/RgPark/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/RgPark/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/RgPark/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Riddle/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Riddle/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Riddle/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Riddle/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/Login.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/tips/tips.modal.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/tips/tips.modal.receiving.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/tips/tips.modal.success.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/tips/_bs.modal.deletFail.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/tips/_bs.modal.deletSuccess.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/tips/_bs.modal.deletTips.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/tips/_bs.modal.detail.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/_AddLayout.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.Menu.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.Navbar.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.Setting.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Shared/_ListLayout.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Spring/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Spring/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Spring/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Spring/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Syylc/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Syylc/GiveMoney.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Syylc/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Syylc/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Syylc/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Test/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Test/GiveMoney.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Test/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/vivo/Activity.cshtml">
+      <publishTime>03/30/2018 01:21:39</publishTime>
+    </File>
+    <File Include="Views/vivo/HadAttend.cshtml">
+      <publishTime>03/30/2018 01:24:19</publishTime>
+    </File>
+    <File Include="Views/vivo/Nogift.cshtml">
+      <publishTime>03/30/2018 00:32:57</publishTime>
+    </File>
+    <File Include="Views/vivo/OutOfDate.cshtml">
+      <publishTime>03/30/2018 00:33:09</publishTime>
+    </File>
+    <File Include="Views/Wdat/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdat/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdat/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdat/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdbyl/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdbyl/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdbyl/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdbyl/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdtx/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdtx/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdtx/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdtx/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdtyj/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/Wdtyj/HadAttend.cshtml">
+      <publishTime>03/30/2018 00:36:08</publishTime>
+    </File>
+    <File Include="Views/Wdtyj/Nogift.cshtml">
+      <publishTime>03/30/2018 00:36:19</publishTime>
+    </File>
+    <File Include="Views/Wdtyj/OutOfDate.cshtml">
+      <publishTime>03/30/2018 00:36:31</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/WxGetToken/Index.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/YHEye/HasAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/YHEye/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/YHEye/WXActivity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/YuLongCity/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/YuLongCity/GiveMoney.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/YuLongCity/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/YuLongCity/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/YuLongCity/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTE/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTE/GiveMoney.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTE/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTE/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTE/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTECity/Activity.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTECity/GiveMoney.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTECity/HadAttend.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTECity/Nogift.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/ZTECity/OutOfDate.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>03/27/2018 14:31:29</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/30/2018 00:38:06</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -151,6 +151,7 @@
     <Compile Include="Controllers\SpringController.cs" />
     <Compile Include="Controllers\SyylcController.cs" />
     <Compile Include="Controllers\ValentinesDayController.cs" />
+    <Compile Include="Controllers\vivoController.cs" />
     <Compile Include="Controllers\WdatController.cs" />
     <Compile Include="Controllers\WdbylController.cs" />
     <Compile Include="Controllers\WdtxController.cs" />
@@ -269,6 +270,13 @@
     <Content Include="Content\image\ValentinesDay\award1.png" />
     <Content Include="Content\image\ValentinesDay\award2.png" />
     <Content Include="Content\image\ValentinesDay\award3.png" />
+    <Content Include="Content\image\vivo\A.jpg" />
+    <Content Include="Content\image\vivo\B.jpg" />
+    <Content Include="Content\image\vivo\C.jpg" />
+    <Content Include="Content\image\vivo\D.jpg" />
+    <Content Include="Content\image\vivo\HadAttend.jpg" />
+    <Content Include="Content\image\vivo\Nogift.jpg" />
+    <Content Include="Content\image\vivo\OutOfDate.jpg" />
     <Content Include="Content\image\Wdat\A.jpg" />
     <Content Include="Content\image\Wdat\B.jpg" />
     <Content Include="Content\image\Wdat\C.jpg" />
@@ -412,6 +420,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\hothighpark.pubxml" />
+    <None Include="Properties\PublishProfiles\vivo.pubxml" />
     <None Include="Scripts\jquery-1.11.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.11.1.js" />
     <Content Include="Scripts\jquery-1.11.1.min.js" />
@@ -551,6 +560,10 @@
     <Content Include="Views\Riddle\HadAttend.cshtml" />
     <Content Include="Views\Riddle\Nogift.cshtml" />
     <Content Include="Views\Riddle\OutOfDate.cshtml" />
+    <Content Include="Views\vivo\Activity.cshtml" />
+    <Content Include="Views\vivo\HadAttend.cshtml" />
+    <Content Include="Views\vivo\Nogift.cshtml" />
+    <Content Include="Views\vivo\OutOfDate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
