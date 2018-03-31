@@ -184,12 +184,13 @@ namespace UI.Controllers
                     Common.Helper.Logger.Info("获取微信用户信息失败");
                 
                     //微信用户信息未获取到 重定向至活动入口Action
-                    string url = string.Format("{0}?activityId={1}", enter_url, request.activityId);
-               
+                    string url = string.Format("{0}?activityId={1}&flag={2}", enter_url, request.activityId,request.flag);
+
+                    string urlencode = System.Web.HttpUtility.UrlEncode(url, System.Text.Encoding.UTF8);
                     //url encode编码
                     //string urlencode = System.Web.HttpUtility.UrlEncode(url, System.Text.Encoding.UTF8);
 
-                    ResponseRedirect(url);
+                    ResponseWXRedirect(url);
 
                     return empty;
                 }
